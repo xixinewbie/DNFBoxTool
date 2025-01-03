@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="DNFBO:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/DNFBO_jar</output-path>
+    <root id="archive" name="DNFBO.jar">
+      <element id="module-output" name="DNFBO" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/net/java/dev/jna/jna-platform/5.16.0/jna-platform-5.16.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/net/java/dev/jna/jna/5.16.0/jna-5.16.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/json/json/20230227/json-20230227.jar" path-in-jar="/" />
+      <element id="library" level="project" name="json" />
+      <element id="library" level="project" name="net.java.dev.jna" />
+      <element id="library" level="project" name="net.java.dev.jna.platform" />
+    </root>
+  </artifact>
+</component>
