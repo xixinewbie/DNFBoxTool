@@ -49,7 +49,7 @@ public class Listener {
             };
             keyboardHook = lib.SetWindowsHookEx(WinUser.WH_KEYBOARD_LL, lowLevelKeyboardProc, hMod, 0);
 
-            S.s("Keyboard hook installed");
+//            S.s("Keyboard hook installed");
 
             WinUser.LowLevelMouseProc lowLevelMouseProc = new WinUser.LowLevelMouseProc() {
 

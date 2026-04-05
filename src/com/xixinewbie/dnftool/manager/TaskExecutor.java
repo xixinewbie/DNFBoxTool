@@ -43,14 +43,14 @@ public class TaskExecutor extends Thread {
         S.sleep(300);
         int count = 0;
         if (operation != null) {
-            runTask(operation);
+            runTask(operation, count);
         } else {
             while (!isQuit() && count < task.getCount()) {
                 count++;
                 List<Operation> operations = task.copy();
                 if (operations != null) {
                     for (Operation operation : operations) {
-                        if (!runTask(operation)) {
+                        if (!runTask(operation, count)) {
                             break;
                         }
                         S.sleep(200);
@@ -71,19 +71,19 @@ public class TaskExecutor extends Thread {
         }
     }
     
-    private boolean runTask(Operation operation) {
-        int countTask = 0;
+    private boolean runTask(Operation operation, int countTask) {
+        int countOperation = 0;
         //第一个执行任务
         if (this.operationPlaying == null) {
             //先把窗口调整到前排
             WindowPositionManager.setTop();
         }
         this.operationPlaying = operation;
-        while (!isQuit() && countTask < operation.getCount()) {
-            countTask++;
+        while (!isQuit() && countOperation < operation.getCount()) {
+            countOperation++;
             timeLastActionExecuted = 0;//重置一下时间，否则当循环第二次时，时间会小于上一次。
             timeLastAction = 0;
-            callback.onRun(operation, countTask);
+            callback.onRun(operation, countOperation, countTask);
             //如果是睡眠任务，仅执行睡眠操作
             if (operation.getSleepTime() > 0) {
                 S.sleep(operation.getSleepTime());
@@ -246,7 +246,7 @@ public class TaskExecutor extends Thread {
     }
     
     public interface Callback {
-        void onRun(Operation operation, int count);
+        void onRun(Operation operation, int countOperation, int count);
         
         void onEnd();
         

@@ -24,10 +24,9 @@ public class ColorUIManager {
     public static Color colorBackgroundRecord = Color.decode("#2e436e");
     public static Color colorBackgroundEdit = Color.decode("#2e436e");
     public static Color colorBackgroundPlay = Color.decode("#275c2c");
-    public static Color colorBackgroundDelete = Color.decode("#c94f4f");
-    public static Color colorBackgroundDeleteDark = Color.decode("#a92f2f");
+    public static Color colorBackgroundDelete = Color.decode("#a92f2f");
     public static Color colorBackgroundExport = Color.decode("#aa7722");
-    public static Color colorBackgroundImport = Color.decode("#aa2277");
+    public static Color colorBackgroundImport = Color.decode("#2e436e");
     public static Color colorBackgroundDialog = Color.decode("#2b2d30");
     public static Color colorTextLight = Color.decode("#efefef");
     public static Color colorText = Color.decode("#8089a3");

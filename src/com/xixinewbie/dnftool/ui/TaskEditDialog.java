@@ -194,7 +194,6 @@ public class TaskEditDialog extends JDialog {
                 
                 String directory = fileDialog.getDirectory();
                 String fileName = fileDialog.getFile();
-                S.s("directory:" + directory + " fileName:" + fileName);
                 
                 if (directory != null && fileName != null) {
                     File file = new File(directory, fileName);
@@ -318,7 +317,7 @@ public class TaskEditDialog extends JDialog {
         
         buttonDelete = new RoundedButton("删除");
         buttonDelete.setMargin(new Insets(0, 0, 0, 0));
-        buttonDelete.setBackground(colorBackgroundDeleteDark);
+        buttonDelete.setBackground(colorBackgroundDelete);
         ColorUIManager.setTextSize(buttonDelete, textSizeButton);
         ColorUIManager.setDefaultIcon(buttonDelete, "delete.png", 20);
         ColorUIManager.setTextColor(buttonDelete, colorTextLight);
@@ -455,11 +454,11 @@ public class TaskEditDialog extends JDialog {
         buttonAddSleep.setBounds(xAddSleepOp, yAddSleepOp, wAddButton, hAddButton);
         container.add(buttonAddSleep);
         
-        int wPositionTitle = 50;
+        int wPositionTitle = 60;
         int hPositionTitle = 30;
         int xPositionTitle = xAddSleepOp + wAddButton + margin * 3;
         int yPositionTitle = margin;
-        addPositionTitleView = new JLabel("插入位置");
+        addPositionTitleView = new JLabel("插入位置:");
         ColorUIManager.setTextColor(addPositionTitleView, colorText);
         addPositionTitleView.setBounds(xPositionTitle, yPositionTitle, wPositionTitle, hPositionTitle);
         container.add(addPositionTitleView);
@@ -510,7 +509,7 @@ public class TaskEditDialog extends JDialog {
         
         int wTest = 140;
         int hTest = 40;
-        int xTest = wOptions-wTest-30;
+        int xTest = wOptions - wTest - 30;
         int yTest = hOptions - hTest - 30;
         testButton = new RoundedButton("测试脚本");
         ColorUIManager.setTextColor(testButton, colorTextLight);
@@ -523,8 +522,8 @@ public class TaskEditDialog extends JDialog {
             public void actionPerformed(ActionEvent e) {
                 PlayManager.startPlay(task, null, new TaskExecutor.Callback() {
                     @Override
-                    public void onRun(Operation operation, int count) {
-                        setTitle(getName(operation) + " " + count + "/" + operation.getCount());
+                    public void onRun(Operation operation, int countOperation, int count) {
+                        setTitle("[ " + count + "/" + task.getCount() + " ] " + getName(operation) + " " + countOperation + "/" + operation.getCount());
                         flushGlobalUI();
                     }
                     
@@ -660,8 +659,8 @@ public class TaskEditDialog extends JDialog {
             public void actionPerformed(ActionEvent actionEvent) {
                 PlayManager.startPlay(task, operation, new TaskExecutor.Callback() {
                     @Override
-                    public void onRun(Operation operation, int count) {
-                        setTitle(getName(operation) + " " + count + "/" + operation.getCount());
+                    public void onRun(Operation operation, int countOperation, int count) {
+                        setTitle(getName(operation) + " " + countOperation + "/" + operation.getCount());
                         flushGlobalUI();
                     }
                     
@@ -696,12 +695,14 @@ public class TaskEditDialog extends JDialog {
                 boolean isCurrentPlaying = playingOperation != null && playingOperation.getCreateTime() == operation.getCreateTime();
                 boolean gameExists = WindowPositionManager.gameWindowExists;
                 
-                buttonPlay.setEnabled(gameExists && enable && !operation.isEmpty());
                 buttonPlay.setLoading(isCurrentPlaying);
+                
+                buttonPlay.setEnabled(gameExists && enable && !operation.isEmpty());
+                buttonRecord.setEnabled(gameExists && enable);
+                buttonDelete.setEnabled(enable);
+                
                 taskNameView.setEnabled(enable);
                 countView.setEnabled(enable);
-                buttonRecord.setEnabled(enable);
-                buttonDelete.setEnabled(enable);
                 
                 item.setBackground(isCurrentPlaying ? colorBackgroundItemPlaying : colorBackgroundItem);
             }
@@ -817,7 +818,7 @@ public class TaskEditDialog extends JDialog {
         RoundedButton buttonDelete = new RoundedButton();
         buttonDelete.setMargin(new Insets(0, 0, 0, 0));
         buttonDelete.setText("删除");
-        buttonDelete.setBackground(colorBackgroundDeleteDark);
+        buttonDelete.setBackground(colorBackgroundDelete);
         buttonDelete.setBorder(null);
         buttonDelete.setFocusable(false);
         buttonDelete.setSize(wButton, hButton);
@@ -888,7 +889,7 @@ public class TaskEditDialog extends JDialog {
         buttonDelete.setEnabled(enable);
         addPositionView.setText(String.valueOf(task.getOperationSize()));
         taskCountView.setText(String.valueOf(task.getCount()));
-        testButton.setEnabled(enable);
+        testButton.setEnabled(WindowPositionManager.gameWindowExists && enable);
         
         
         Task playingTask = PlayManager.isPlaying() ? PlayManager.getPlayingTask() : null;

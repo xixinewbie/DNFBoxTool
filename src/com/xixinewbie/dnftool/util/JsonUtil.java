@@ -9,6 +9,7 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class JsonUtil {
@@ -157,7 +158,7 @@ public class JsonUtil {
         for (int i = 0; i < tasksArray.length(); i++) {
             tasks.add(toTask(tasksArray.optJSONObject(i)));
         }
-        S.s("size:" + tasks.size());
+        tasks.sort(Comparator.comparingLong(Task::getCreateTime));
         return tasks;
     }
 }

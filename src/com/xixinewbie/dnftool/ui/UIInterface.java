@@ -52,14 +52,14 @@ public class UIInterface extends JFrame {
     private RoundedButton buttonLoad;
     private SmoothSwitch jumpMoveCheckBox;
     private SmoothSwitch highSpeedCheckBox;
-    
+    private JLabel titleLabel;
     
     private ItemListener jumpMouseMoveListener;
     private ItemListener highSpeedListener;
     
     public UIInterface() {
         setUndecorated(true);
-        super.setTitle("DNF脚本录制器");
+        super.setTitle("DNF开盒工具");
         initFonts(this);
         getContentPane().setBackground(null);
         
@@ -101,10 +101,10 @@ public class UIInterface extends JFrame {
         titleBar.setBounds(xTitleBar, yTitleBar, wTitleBar, hTitleBar);
         titleBar.setBackground(colorBackgroundTitleBar);
         
-        JLabel titleLabel = new JLabel("DNF脚本录制器");
+        titleLabel = new JLabel("DNF开盒工具");
         titleLabel.setForeground(colorTextTitleBar);
         ColorUIManager.setTextSize(titleBar, 12);
-        titleLabel.setBounds(10, (hTitleBar - 30) / 2 - 2, 200, 30);
+        titleLabel.setBounds(10, (hTitleBar - 30) / 2 - 2, (int) (wTitleBar * 0.6f), 30);
         titleBar.add(titleLabel);
         
         int wClose = (int) (hTitleBar * 1.2f);
@@ -247,7 +247,7 @@ public class UIInterface extends JFrame {
                 
                 if (directory != null && fileName != null) {
                     File file = new File(directory, fileName);
-                    S.s("load from :" + file.getAbsolutePath());
+//                    S.s("load from :" + file.getAbsolutePath());
                     String json = StorageManager.read(file.getAbsolutePath());
                     
                     Task newTask = JsonUtil.toTask(json);
@@ -345,7 +345,7 @@ public class UIInterface extends JFrame {
         int xIcon = margin;
         int yIcon = (hItem - hIcon) / 2;
         
-        int wTaskName = 230;
+        int wTaskName = 280;
         int hTaskName = 30;
         int xTaskName = xIcon + wIcon + margin2;
         int yTaskName = yIcon - 5;
@@ -462,9 +462,6 @@ public class UIInterface extends JFrame {
                 boolean isRecording = RecordManager.isRecording();
                 boolean enable = !isPlaying && !isRecording;
                 boolean isCurrentPlaying = playingTask != null && playingTask.getCreateTime() == task.getCreateTime();
-                if (isPlaying) {
-                    S.s("isCurrentPlaying:" + isCurrentPlaying + "   playingTask:" + getName(playingTask) + "   = " + getName(task));
-                }
                 boolean gameExists = WindowPositionManager.gameWindowExists;
                 
                 buttonPlay.setEnabled(gameExists && !isPlaying && !isRecording && !task.isEnpty());
@@ -482,8 +479,8 @@ public class UIInterface extends JFrame {
             public void actionPerformed(ActionEvent actionEvent) {
                 PlayManager.startPlay(task, null, new TaskExecutor.Callback() {
                     @Override
-                    public void onRun(Operation operation, int count) {
-                        setTitle(getName(operation) + " " + count + "/" + operation.getCount());
+                    public void onRun(Operation operation, int countOperation, int count) {
+                        setTitle("[ " + count + "/" + task.getCount() + " ] " + getName(operation) + " " + countOperation + "/" + operation.getCount());
                         flushGlobalUI();
                     }
                     
@@ -640,7 +637,8 @@ public class UIInterface extends JFrame {
     
     @Override
     public void setTitle(String title) {
-        S.s(title);
+//        S.s(title);
+        titleLabel.setText("DNF开盒工具   " + title);
     }
     
     public String getName(Task task) {
@@ -650,10 +648,6 @@ public class UIInterface extends JFrame {
     public String getName(Operation operation) {
         return S.isEmpty(operation.getName()) ? "任务" + operation.getCreateTime() : operation.getName();
     }
-
-//    public boolean isButtonEnabled() {
-//        return !isPlaying() && !isRecording();
-//    }
     
     /*
         使用jlink来编译一个缩减版JRE
