@@ -694,7 +694,7 @@ public class TaskEditDialog extends JDialog {
                 boolean isRecording = RecordManager.isRecording();
                 boolean enable = !isPlaying && !isRecording;
                 boolean isCurrentPlaying = playingOperation != null && playingOperation.getCreateTime() == operation.getCreateTime();
-                boolean gameExists = true || WindowPositionManager.gameWindowExists;
+                boolean gameExists = WindowPositionManager.gameWindowExists;
                 
                 buttonPlay.setEnabled(gameExists && enable && !operation.isEmpty());
                 buttonPlay.setLoading(isCurrentPlaying);

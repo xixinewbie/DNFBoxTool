@@ -465,7 +465,7 @@ public class UIInterface extends JFrame {
                 if (isPlaying) {
                     S.s("isCurrentPlaying:" + isCurrentPlaying + "   playingTask:" + getName(playingTask) + "   = " + getName(task));
                 }
-                boolean gameExists = true || WindowPositionManager.gameWindowExists;
+                boolean gameExists = WindowPositionManager.gameWindowExists;
                 
                 buttonPlay.setEnabled(gameExists && !isPlaying && !isRecording && !task.isEnpty());
                 buttonPlay.setLoading(isCurrentPlaying);
