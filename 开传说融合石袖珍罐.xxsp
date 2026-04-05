@@ -1,0 +1,5680 @@
+{
+  "operations": [
+    {
+      "createTime": 1775342831573,
+      "count": 1,
+      "name": "点一下消耗品栏",
+      "sleepTime": 0,
+      "events": [
+        {
+          "mouseButton": 1,
+          "x": 1585,
+          "index": 0,
+          "y": 638,
+          "action": 1,
+          "time": 1775424198478,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 1,
+          "x": 1585,
+          "index": 0,
+          "y": 638,
+          "action": 2,
+          "time": 1775424198642,
+          "type": 1,
+          "key": 0
+        }
+      ]
+    },
+    {
+      "createTime": 1775342828868,
+      "count": 1,
+      "name": "右键点击罐子",
+      "sleepTime": 0,
+      "events": [
+        {
+          "mouseButton": 0,
+          "x": 1526,
+          "index": 0,
+          "y": 732,
+          "action": 3,
+          "time": 1775428016791,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1525,
+          "index": 0,
+          "y": 732,
+          "action": 3,
+          "time": 1775428016802,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1525,
+          "index": 0,
+          "y": 732,
+          "action": 3,
+          "time": 1775428016816,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1524,
+          "index": 0,
+          "y": 732,
+          "action": 3,
+          "time": 1775428016836,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1523,
+          "index": 0,
+          "y": 732,
+          "action": 3,
+          "time": 1775428016845,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1523,
+          "index": 0,
+          "y": 731,
+          "action": 3,
+          "time": 1775428016851,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1523,
+          "index": 0,
+          "y": 731,
+          "action": 3,
+          "time": 1775428016859,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1522,
+          "index": 0,
+          "y": 731,
+          "action": 3,
+          "time": 1775428016860,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1522,
+          "index": 0,
+          "y": 730,
+          "action": 3,
+          "time": 1775428016864,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1521,
+          "index": 0,
+          "y": 730,
+          "action": 3,
+          "time": 1775428016868,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1520,
+          "index": 0,
+          "y": 730,
+          "action": 3,
+          "time": 1775428016874,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1520,
+          "index": 0,
+          "y": 730,
+          "action": 3,
+          "time": 1775428016878,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1519,
+          "index": 0,
+          "y": 730,
+          "action": 3,
+          "time": 1775428016882,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1518,
+          "index": 0,
+          "y": 730,
+          "action": 3,
+          "time": 1775428016886,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1518,
+          "index": 0,
+          "y": 730,
+          "action": 3,
+          "time": 1775428016891,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1518,
+          "index": 0,
+          "y": 729,
+          "action": 3,
+          "time": 1775428016892,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1517,
+          "index": 0,
+          "y": 729,
+          "action": 3,
+          "time": 1775428016897,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1516,
+          "index": 0,
+          "y": 729,
+          "action": 3,
+          "time": 1775428016899,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1515,
+          "index": 0,
+          "y": 729,
+          "action": 3,
+          "time": 1775428016902,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1515,
+          "index": 0,
+          "y": 729,
+          "action": 3,
+          "time": 1775428016907,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1514,
+          "index": 0,
+          "y": 729,
+          "action": 3,
+          "time": 1775428016909,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1514,
+          "index": 0,
+          "y": 728,
+          "action": 3,
+          "time": 1775428016912,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1513,
+          "index": 0,
+          "y": 728,
+          "action": 3,
+          "time": 1775428016915,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1513,
+          "index": 0,
+          "y": 728,
+          "action": 3,
+          "time": 1775428016918,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1512,
+          "index": 0,
+          "y": 728,
+          "action": 3,
+          "time": 1775428016919,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1512,
+          "index": 0,
+          "y": 727,
+          "action": 3,
+          "time": 1775428016922,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1511,
+          "index": 0,
+          "y": 727,
+          "action": 3,
+          "time": 1775428016925,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1510,
+          "index": 0,
+          "y": 727,
+          "action": 3,
+          "time": 1775428016926,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1510,
+          "index": 0,
+          "y": 727,
+          "action": 3,
+          "time": 1775428016928,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1510,
+          "index": 0,
+          "y": 727,
+          "action": 3,
+          "time": 1775428016931,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1509,
+          "index": 0,
+          "y": 727,
+          "action": 3,
+          "time": 1775428016934,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1508,
+          "index": 0,
+          "y": 727,
+          "action": 3,
+          "time": 1775428016935,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1508,
+          "index": 0,
+          "y": 726,
+          "action": 3,
+          "time": 1775428016938,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1508,
+          "index": 0,
+          "y": 726,
+          "action": 3,
+          "time": 1775428016942,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1507,
+          "index": 0,
+          "y": 726,
+          "action": 3,
+          "time": 1775428016944,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1506,
+          "index": 0,
+          "y": 726,
+          "action": 3,
+          "time": 1775428016947,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1506,
+          "index": 0,
+          "y": 726,
+          "action": 3,
+          "time": 1775428016949,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1506,
+          "index": 0,
+          "y": 725,
+          "action": 3,
+          "time": 1775428016950,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1505,
+          "index": 0,
+          "y": 725,
+          "action": 3,
+          "time": 1775428016953,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1504,
+          "index": 0,
+          "y": 725,
+          "action": 3,
+          "time": 1775428016957,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1503,
+          "index": 0,
+          "y": 725,
+          "action": 3,
+          "time": 1775428016960,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1503,
+          "index": 0,
+          "y": 725,
+          "action": 3,
+          "time": 1775428016963,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1502,
+          "index": 0,
+          "y": 725,
+          "action": 3,
+          "time": 1775428016965,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1501,
+          "index": 0,
+          "y": 725,
+          "action": 3,
+          "time": 1775428016967,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1501,
+          "index": 0,
+          "y": 724,
+          "action": 3,
+          "time": 1775428016970,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1501,
+          "index": 0,
+          "y": 724,
+          "action": 3,
+          "time": 1775428016974,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1500,
+          "index": 0,
+          "y": 724,
+          "action": 3,
+          "time": 1775428016978,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1499,
+          "index": 0,
+          "y": 723,
+          "action": 3,
+          "time": 1775428016984,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1498,
+          "index": 0,
+          "y": 723,
+          "action": 3,
+          "time": 1775428016988,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1498,
+          "index": 0,
+          "y": 723,
+          "action": 3,
+          "time": 1775428016994,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1497,
+          "index": 0,
+          "y": 723,
+          "action": 3,
+          "time": 1775428017002,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1496,
+          "index": 0,
+          "y": 723,
+          "action": 3,
+          "time": 1775428017005,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1496,
+          "index": 0,
+          "y": 722,
+          "action": 3,
+          "time": 1775428017010,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1496,
+          "index": 0,
+          "y": 722,
+          "action": 3,
+          "time": 1775428017019,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1495,
+          "index": 0,
+          "y": 722,
+          "action": 3,
+          "time": 1775428017029,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1494,
+          "index": 0,
+          "y": 722,
+          "action": 3,
+          "time": 1775428017038,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1493,
+          "index": 0,
+          "y": 722,
+          "action": 3,
+          "time": 1775428017042,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1493,
+          "index": 0,
+          "y": 722,
+          "action": 3,
+          "time": 1775428017045,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1493,
+          "index": 0,
+          "y": 722,
+          "action": 3,
+          "time": 1775428017051,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1493,
+          "index": 0,
+          "y": 721,
+          "action": 3,
+          "time": 1775428017057,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1492,
+          "index": 0,
+          "y": 721,
+          "action": 3,
+          "time": 1775428017061,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1491,
+          "index": 0,
+          "y": 721,
+          "action": 3,
+          "time": 1775428017065,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1491,
+          "index": 0,
+          "y": 721,
+          "action": 3,
+          "time": 1775428017067,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1491,
+          "index": 0,
+          "y": 720,
+          "action": 3,
+          "time": 1775428017072,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1490,
+          "index": 0,
+          "y": 720,
+          "action": 3,
+          "time": 1775428017080,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1489,
+          "index": 0,
+          "y": 720,
+          "action": 3,
+          "time": 1775428017085,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1488,
+          "index": 0,
+          "y": 720,
+          "action": 3,
+          "time": 1775428017091,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1488,
+          "index": 0,
+          "y": 720,
+          "action": 3,
+          "time": 1775428017094,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1488,
+          "index": 0,
+          "y": 720,
+          "action": 3,
+          "time": 1775428017100,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1487,
+          "index": 0,
+          "y": 720,
+          "action": 3,
+          "time": 1775428017110,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1487,
+          "index": 0,
+          "y": 719,
+          "action": 3,
+          "time": 1775428017113,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1486,
+          "index": 0,
+          "y": 719,
+          "action": 3,
+          "time": 1775428017122,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1486,
+          "index": 0,
+          "y": 719,
+          "action": 3,
+          "time": 1775428017129,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1485,
+          "index": 0,
+          "y": 719,
+          "action": 3,
+          "time": 1775428017135,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1484,
+          "index": 0,
+          "y": 719,
+          "action": 3,
+          "time": 1775428017137,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1484,
+          "index": 0,
+          "y": 718,
+          "action": 3,
+          "time": 1775428017146,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1483,
+          "index": 0,
+          "y": 718,
+          "action": 3,
+          "time": 1775428017151,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1483,
+          "index": 0,
+          "y": 718,
+          "action": 3,
+          "time": 1775428017153,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1483,
+          "index": 0,
+          "y": 718,
+          "action": 3,
+          "time": 1775428017155,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1482,
+          "index": 0,
+          "y": 718,
+          "action": 3,
+          "time": 1775428017160,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1481,
+          "index": 0,
+          "y": 718,
+          "action": 3,
+          "time": 1775428017167,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1481,
+          "index": 0,
+          "y": 718,
+          "action": 3,
+          "time": 1775428017168,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1481,
+          "index": 0,
+          "y": 717,
+          "action": 3,
+          "time": 1775428017177,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1480,
+          "index": 0,
+          "y": 717,
+          "action": 3,
+          "time": 1775428017181,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1480,
+          "index": 0,
+          "y": 716,
+          "action": 3,
+          "time": 1775428017186,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1479,
+          "index": 0,
+          "y": 716,
+          "action": 3,
+          "time": 1775428017192,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1478,
+          "index": 0,
+          "y": 716,
+          "action": 3,
+          "time": 1775428017195,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1478,
+          "index": 0,
+          "y": 716,
+          "action": 3,
+          "time": 1775428017200,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1478,
+          "index": 0,
+          "y": 715,
+          "action": 3,
+          "time": 1775428017207,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1477,
+          "index": 0,
+          "y": 715,
+          "action": 3,
+          "time": 1775428017211,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1476,
+          "index": 0,
+          "y": 715,
+          "action": 3,
+          "time": 1775428017214,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1476,
+          "index": 0,
+          "y": 715,
+          "action": 3,
+          "time": 1775428017217,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1475,
+          "index": 0,
+          "y": 715,
+          "action": 3,
+          "time": 1775428017218,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1475,
+          "index": 0,
+          "y": 715,
+          "action": 3,
+          "time": 1775428017225,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1474,
+          "index": 0,
+          "y": 714,
+          "action": 3,
+          "time": 1775428017233,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1474,
+          "index": 0,
+          "y": 713,
+          "action": 3,
+          "time": 1775428017241,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1473,
+          "index": 0,
+          "y": 713,
+          "action": 3,
+          "time": 1775428017246,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1473,
+          "index": 0,
+          "y": 713,
+          "action": 3,
+          "time": 1775428017247,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1472,
+          "index": 0,
+          "y": 713,
+          "action": 3,
+          "time": 1775428017253,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1471,
+          "index": 0,
+          "y": 713,
+          "action": 3,
+          "time": 1775428017257,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1471,
+          "index": 0,
+          "y": 712,
+          "action": 3,
+          "time": 1775428017259,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1471,
+          "index": 0,
+          "y": 712,
+          "action": 3,
+          "time": 1775428017264,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1470,
+          "index": 0,
+          "y": 712,
+          "action": 3,
+          "time": 1775428017267,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1470,
+          "index": 0,
+          "y": 711,
+          "action": 3,
+          "time": 1775428017274,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1469,
+          "index": 0,
+          "y": 711,
+          "action": 3,
+          "time": 1775428017281,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1469,
+          "index": 0,
+          "y": 710,
+          "action": 3,
+          "time": 1775428017284,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1469,
+          "index": 0,
+          "y": 710,
+          "action": 3,
+          "time": 1775428017291,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1468,
+          "index": 0,
+          "y": 710,
+          "action": 3,
+          "time": 1775428017303,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1467,
+          "index": 0,
+          "y": 710,
+          "action": 3,
+          "time": 1775428017305,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1467,
+          "index": 0,
+          "y": 710,
+          "action": 3,
+          "time": 1775428017321,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1466,
+          "index": 0,
+          "y": 710,
+          "action": 3,
+          "time": 1775428017324,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1466,
+          "index": 0,
+          "y": 709,
+          "action": 3,
+          "time": 1775428017333,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1466,
+          "index": 0,
+          "y": 709,
+          "action": 3,
+          "time": 1775428017337,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1466,
+          "index": 0,
+          "y": 708,
+          "action": 3,
+          "time": 1775428017345,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1465,
+          "index": 0,
+          "y": 708,
+          "action": 3,
+          "time": 1775428017352,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1465,
+          "index": 0,
+          "y": 708,
+          "action": 3,
+          "time": 1775428017353,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1464,
+          "index": 0,
+          "y": 708,
+          "action": 3,
+          "time": 1775428017386,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1464,
+          "index": 0,
+          "y": 708,
+          "action": 3,
+          "time": 1775428017394,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1464,
+          "index": 0,
+          "y": 707,
+          "action": 3,
+          "time": 1775428017407,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1463,
+          "index": 0,
+          "y": 707,
+          "action": 3,
+          "time": 1775428017421,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1462,
+          "index": 0,
+          "y": 707,
+          "action": 3,
+          "time": 1775428017435,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1461,
+          "index": 0,
+          "y": 707,
+          "action": 3,
+          "time": 1775428017442,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1461,
+          "index": 0,
+          "y": 706,
+          "action": 3,
+          "time": 1775428017458,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1461,
+          "index": 0,
+          "y": 706,
+          "action": 3,
+          "time": 1775428017467,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1460,
+          "index": 0,
+          "y": 706,
+          "action": 3,
+          "time": 1775428017470,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1460,
+          "index": 0,
+          "y": 705,
+          "action": 3,
+          "time": 1775428017499,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1459,
+          "index": 0,
+          "y": 705,
+          "action": 3,
+          "time": 1775428017516,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1459,
+          "index": 0,
+          "y": 705,
+          "action": 3,
+          "time": 1775428017587,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 2,
+          "x": 1459,
+          "index": 0,
+          "y": 705,
+          "action": 1,
+          "time": 1775428017953,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 2,
+          "x": 1459,
+          "index": 0,
+          "y": 705,
+          "action": 2,
+          "time": 1775428018192,
+          "type": 1,
+          "key": 0
+        }
+      ]
+    },
+    {
+      "createTime": 1775426345423,
+      "count": 1,
+      "name": "等待开罐子动画结束",
+      "sleepTime": 2000,
+      "events": []
+    },
+    {
+      "createTime": 1775426591340,
+      "count": 1,
+      "name": "点击确定",
+      "sleepTime": 0,
+      "events": [
+        {
+          "mouseButton": 0,
+          "x": 1386,
+          "index": 0,
+          "y": 766,
+          "action": 3,
+          "time": 1775428028654,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1386,
+          "index": 0,
+          "y": 766,
+          "action": 3,
+          "time": 1775428028662,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1386,
+          "index": 0,
+          "y": 766,
+          "action": 3,
+          "time": 1775428028663,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1386,
+          "index": 0,
+          "y": 766,
+          "action": 3,
+          "time": 1775428028670,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1386,
+          "index": 0,
+          "y": 767,
+          "action": 3,
+          "time": 1775428028676,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1386,
+          "index": 0,
+          "y": 768,
+          "action": 3,
+          "time": 1775428028677,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1386,
+          "index": 0,
+          "y": 768,
+          "action": 3,
+          "time": 1775428028683,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1385,
+          "index": 0,
+          "y": 768,
+          "action": 3,
+          "time": 1775428028684,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1385,
+          "index": 0,
+          "y": 768,
+          "action": 3,
+          "time": 1775428028689,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1385,
+          "index": 0,
+          "y": 769,
+          "action": 3,
+          "time": 1775428028690,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1384,
+          "index": 0,
+          "y": 769,
+          "action": 3,
+          "time": 1775428028693,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1384,
+          "index": 0,
+          "y": 770,
+          "action": 3,
+          "time": 1775428028696,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1384,
+          "index": 0,
+          "y": 771,
+          "action": 3,
+          "time": 1775428028699,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1384,
+          "index": 0,
+          "y": 771,
+          "action": 3,
+          "time": 1775428028700,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1384,
+          "index": 0,
+          "y": 771,
+          "action": 3,
+          "time": 1775428028704,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1383,
+          "index": 0,
+          "y": 772,
+          "action": 3,
+          "time": 1775428028706,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1383,
+          "index": 0,
+          "y": 773,
+          "action": 3,
+          "time": 1775428028707,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1382,
+          "index": 0,
+          "y": 773,
+          "action": 3,
+          "time": 1775428028709,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1382,
+          "index": 0,
+          "y": 773,
+          "action": 3,
+          "time": 1775428028712,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1382,
+          "index": 0,
+          "y": 774,
+          "action": 3,
+          "time": 1775428028715,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1382,
+          "index": 0,
+          "y": 775,
+          "action": 3,
+          "time": 1775428028716,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1381,
+          "index": 0,
+          "y": 775,
+          "action": 3,
+          "time": 1775428028718,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1381,
+          "index": 0,
+          "y": 776,
+          "action": 3,
+          "time": 1775428028721,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1380,
+          "index": 0,
+          "y": 776,
+          "action": 3,
+          "time": 1775428028724,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1380,
+          "index": 0,
+          "y": 777,
+          "action": 3,
+          "time": 1775428028725,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1379,
+          "index": 0,
+          "y": 777,
+          "action": 3,
+          "time": 1775428028726,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1379,
+          "index": 0,
+          "y": 778,
+          "action": 3,
+          "time": 1775428028727,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1379,
+          "index": 0,
+          "y": 778,
+          "action": 3,
+          "time": 1775428028729,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1379,
+          "index": 0,
+          "y": 778,
+          "action": 3,
+          "time": 1775428028731,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1378,
+          "index": 0,
+          "y": 779,
+          "action": 3,
+          "time": 1775428028733,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1378,
+          "index": 0,
+          "y": 780,
+          "action": 3,
+          "time": 1775428028734,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1377,
+          "index": 0,
+          "y": 780,
+          "action": 3,
+          "time": 1775428028735,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1377,
+          "index": 0,
+          "y": 781,
+          "action": 3,
+          "time": 1775428028737,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1377,
+          "index": 0,
+          "y": 781,
+          "action": 3,
+          "time": 1775428028740,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1377,
+          "index": 0,
+          "y": 782,
+          "action": 3,
+          "time": 1775428028741,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1376,
+          "index": 0,
+          "y": 782,
+          "action": 3,
+          "time": 1775428028741,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1376,
+          "index": 0,
+          "y": 783,
+          "action": 3,
+          "time": 1775428028742,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1375,
+          "index": 0,
+          "y": 783,
+          "action": 3,
+          "time": 1775428028743,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1375,
+          "index": 0,
+          "y": 783,
+          "action": 3,
+          "time": 1775428028745,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1374,
+          "index": 0,
+          "y": 784,
+          "action": 3,
+          "time": 1775428028746,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1374,
+          "index": 0,
+          "y": 785,
+          "action": 3,
+          "time": 1775428028747,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1374,
+          "index": 0,
+          "y": 785,
+          "action": 3,
+          "time": 1775428028748,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1374,
+          "index": 0,
+          "y": 786,
+          "action": 3,
+          "time": 1775428028750,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1373,
+          "index": 0,
+          "y": 786,
+          "action": 3,
+          "time": 1775428028751,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1373,
+          "index": 0,
+          "y": 787,
+          "action": 3,
+          "time": 1775428028752,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1372,
+          "index": 0,
+          "y": 788,
+          "action": 3,
+          "time": 1775428028753,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1372,
+          "index": 0,
+          "y": 788,
+          "action": 3,
+          "time": 1775428028754,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1371,
+          "index": 0,
+          "y": 788,
+          "action": 3,
+          "time": 1775428028756,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1370,
+          "index": 0,
+          "y": 789,
+          "action": 3,
+          "time": 1775428028757,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1370,
+          "index": 0,
+          "y": 790,
+          "action": 3,
+          "time": 1775428028758,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1370,
+          "index": 0,
+          "y": 791,
+          "action": 3,
+          "time": 1775428028759,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1369,
+          "index": 0,
+          "y": 791,
+          "action": 3,
+          "time": 1775428028761,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1369,
+          "index": 0,
+          "y": 792,
+          "action": 3,
+          "time": 1775428028762,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1369,
+          "index": 0,
+          "y": 792,
+          "action": 3,
+          "time": 1775428028763,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1369,
+          "index": 0,
+          "y": 793,
+          "action": 3,
+          "time": 1775428028764,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1368,
+          "index": 0,
+          "y": 793,
+          "action": 3,
+          "time": 1775428028765,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1367,
+          "index": 0,
+          "y": 794,
+          "action": 3,
+          "time": 1775428028766,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1367,
+          "index": 0,
+          "y": 795,
+          "action": 3,
+          "time": 1775428028768,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1367,
+          "index": 0,
+          "y": 796,
+          "action": 3,
+          "time": 1775428028769,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1365,
+          "index": 0,
+          "y": 796,
+          "action": 3,
+          "time": 1775428028770,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1365,
+          "index": 0,
+          "y": 797,
+          "action": 3,
+          "time": 1775428028771,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1365,
+          "index": 0,
+          "y": 798,
+          "action": 3,
+          "time": 1775428028772,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1364,
+          "index": 0,
+          "y": 798,
+          "action": 3,
+          "time": 1775428028773,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1364,
+          "index": 0,
+          "y": 798,
+          "action": 3,
+          "time": 1775428028774,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1364,
+          "index": 0,
+          "y": 799,
+          "action": 3,
+          "time": 1775428028775,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1364,
+          "index": 0,
+          "y": 800,
+          "action": 3,
+          "time": 1775428028776,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1363,
+          "index": 0,
+          "y": 801,
+          "action": 3,
+          "time": 1775428028777,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1363,
+          "index": 0,
+          "y": 801,
+          "action": 3,
+          "time": 1775428028778,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1362,
+          "index": 0,
+          "y": 802,
+          "action": 3,
+          "time": 1775428028779,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1362,
+          "index": 0,
+          "y": 803,
+          "action": 3,
+          "time": 1775428028780,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1362,
+          "index": 0,
+          "y": 803,
+          "action": 3,
+          "time": 1775428028781,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1361,
+          "index": 0,
+          "y": 804,
+          "action": 3,
+          "time": 1775428028783,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1359,
+          "index": 0,
+          "y": 806,
+          "action": 3,
+          "time": 1775428028784,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1359,
+          "index": 0,
+          "y": 806,
+          "action": 3,
+          "time": 1775428028784,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1358,
+          "index": 0,
+          "y": 807,
+          "action": 3,
+          "time": 1775428028785,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1358,
+          "index": 0,
+          "y": 808,
+          "action": 3,
+          "time": 1775428028788,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1357,
+          "index": 0,
+          "y": 809,
+          "action": 3,
+          "time": 1775428028789,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1357,
+          "index": 0,
+          "y": 809,
+          "action": 3,
+          "time": 1775428028790,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1356,
+          "index": 0,
+          "y": 810,
+          "action": 3,
+          "time": 1775428028791,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1356,
+          "index": 0,
+          "y": 811,
+          "action": 3,
+          "time": 1775428028792,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1355,
+          "index": 0,
+          "y": 811,
+          "action": 3,
+          "time": 1775428028792,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1355,
+          "index": 0,
+          "y": 811,
+          "action": 3,
+          "time": 1775428028794,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1354,
+          "index": 0,
+          "y": 812,
+          "action": 3,
+          "time": 1775428028795,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1354,
+          "index": 0,
+          "y": 813,
+          "action": 3,
+          "time": 1775428028795,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1353,
+          "index": 0,
+          "y": 814,
+          "action": 3,
+          "time": 1775428028797,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1353,
+          "index": 0,
+          "y": 814,
+          "action": 3,
+          "time": 1775428028798,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1353,
+          "index": 0,
+          "y": 815,
+          "action": 3,
+          "time": 1775428028799,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1352,
+          "index": 0,
+          "y": 816,
+          "action": 3,
+          "time": 1775428028801,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1351,
+          "index": 0,
+          "y": 816,
+          "action": 3,
+          "time": 1775428028802,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1351,
+          "index": 0,
+          "y": 817,
+          "action": 3,
+          "time": 1775428028803,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1351,
+          "index": 0,
+          "y": 818,
+          "action": 3,
+          "time": 1775428028804,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1350,
+          "index": 0,
+          "y": 819,
+          "action": 3,
+          "time": 1775428028806,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1349,
+          "index": 0,
+          "y": 819,
+          "action": 3,
+          "time": 1775428028807,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1349,
+          "index": 0,
+          "y": 820,
+          "action": 3,
+          "time": 1775428028807,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1349,
+          "index": 0,
+          "y": 821,
+          "action": 3,
+          "time": 1775428028809,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1348,
+          "index": 0,
+          "y": 821,
+          "action": 3,
+          "time": 1775428028810,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1347,
+          "index": 0,
+          "y": 822,
+          "action": 3,
+          "time": 1775428028812,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1346,
+          "index": 0,
+          "y": 823,
+          "action": 3,
+          "time": 1775428028813,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1346,
+          "index": 0,
+          "y": 824,
+          "action": 3,
+          "time": 1775428028814,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1346,
+          "index": 0,
+          "y": 824,
+          "action": 3,
+          "time": 1775428028815,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1346,
+          "index": 0,
+          "y": 825,
+          "action": 3,
+          "time": 1775428028815,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1345,
+          "index": 0,
+          "y": 825,
+          "action": 3,
+          "time": 1775428028817,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1345,
+          "index": 0,
+          "y": 826,
+          "action": 3,
+          "time": 1775428028818,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1344,
+          "index": 0,
+          "y": 827,
+          "action": 3,
+          "time": 1775428028819,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1343,
+          "index": 0,
+          "y": 828,
+          "action": 3,
+          "time": 1775428028821,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1343,
+          "index": 0,
+          "y": 829,
+          "action": 3,
+          "time": 1775428028822,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1342,
+          "index": 0,
+          "y": 829,
+          "action": 3,
+          "time": 1775428028823,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1342,
+          "index": 0,
+          "y": 830,
+          "action": 3,
+          "time": 1775428028824,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1341,
+          "index": 0,
+          "y": 831,
+          "action": 3,
+          "time": 1775428028825,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1341,
+          "index": 0,
+          "y": 831,
+          "action": 3,
+          "time": 1775428028826,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1340,
+          "index": 0,
+          "y": 832,
+          "action": 3,
+          "time": 1775428028827,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1340,
+          "index": 0,
+          "y": 833,
+          "action": 3,
+          "time": 1775428028827,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1340,
+          "index": 0,
+          "y": 834,
+          "action": 3,
+          "time": 1775428028828,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1339,
+          "index": 0,
+          "y": 834,
+          "action": 3,
+          "time": 1775428028829,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1339,
+          "index": 0,
+          "y": 835,
+          "action": 3,
+          "time": 1775428028830,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1337,
+          "index": 0,
+          "y": 836,
+          "action": 3,
+          "time": 1775428028831,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1337,
+          "index": 0,
+          "y": 837,
+          "action": 3,
+          "time": 1775428028833,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1337,
+          "index": 0,
+          "y": 837,
+          "action": 3,
+          "time": 1775428028833,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1337,
+          "index": 0,
+          "y": 838,
+          "action": 3,
+          "time": 1775428028834,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1336,
+          "index": 0,
+          "y": 839,
+          "action": 3,
+          "time": 1775428028837,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1335,
+          "index": 0,
+          "y": 840,
+          "action": 3,
+          "time": 1775428028838,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1335,
+          "index": 0,
+          "y": 841,
+          "action": 3,
+          "time": 1775428028839,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1334,
+          "index": 0,
+          "y": 842,
+          "action": 3,
+          "time": 1775428028841,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1334,
+          "index": 0,
+          "y": 843,
+          "action": 3,
+          "time": 1775428028842,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1333,
+          "index": 0,
+          "y": 844,
+          "action": 3,
+          "time": 1775428028843,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1332,
+          "index": 0,
+          "y": 845,
+          "action": 3,
+          "time": 1775428028845,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1332,
+          "index": 0,
+          "y": 845,
+          "action": 3,
+          "time": 1775428028846,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1331,
+          "index": 0,
+          "y": 847,
+          "action": 3,
+          "time": 1775428028847,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1330,
+          "index": 0,
+          "y": 848,
+          "action": 3,
+          "time": 1775428028849,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1330,
+          "index": 0,
+          "y": 848,
+          "action": 3,
+          "time": 1775428028850,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1329,
+          "index": 0,
+          "y": 849,
+          "action": 3,
+          "time": 1775428028851,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1329,
+          "index": 0,
+          "y": 851,
+          "action": 3,
+          "time": 1775428028852,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1328,
+          "index": 0,
+          "y": 851,
+          "action": 3,
+          "time": 1775428028854,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1327,
+          "index": 0,
+          "y": 853,
+          "action": 3,
+          "time": 1775428028855,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1327,
+          "index": 0,
+          "y": 854,
+          "action": 3,
+          "time": 1775428028855,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1327,
+          "index": 0,
+          "y": 854,
+          "action": 3,
+          "time": 1775428028857,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1326,
+          "index": 0,
+          "y": 855,
+          "action": 3,
+          "time": 1775428028858,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1325,
+          "index": 0,
+          "y": 855,
+          "action": 3,
+          "time": 1775428028859,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1325,
+          "index": 0,
+          "y": 856,
+          "action": 3,
+          "time": 1775428028860,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1324,
+          "index": 0,
+          "y": 857,
+          "action": 3,
+          "time": 1775428028862,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1324,
+          "index": 0,
+          "y": 858,
+          "action": 3,
+          "time": 1775428028863,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1324,
+          "index": 0,
+          "y": 860,
+          "action": 3,
+          "time": 1775428028864,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1323,
+          "index": 0,
+          "y": 860,
+          "action": 3,
+          "time": 1775428028866,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1322,
+          "index": 0,
+          "y": 861,
+          "action": 3,
+          "time": 1775428028867,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1321,
+          "index": 0,
+          "y": 862,
+          "action": 3,
+          "time": 1775428028868,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1321,
+          "index": 0,
+          "y": 863,
+          "action": 3,
+          "time": 1775428028870,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1320,
+          "index": 0,
+          "y": 864,
+          "action": 3,
+          "time": 1775428028871,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1320,
+          "index": 0,
+          "y": 865,
+          "action": 3,
+          "time": 1775428028872,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1319,
+          "index": 0,
+          "y": 865,
+          "action": 3,
+          "time": 1775428028873,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1319,
+          "index": 0,
+          "y": 866,
+          "action": 3,
+          "time": 1775428028874,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1319,
+          "index": 0,
+          "y": 867,
+          "action": 3,
+          "time": 1775428028875,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1318,
+          "index": 0,
+          "y": 867,
+          "action": 3,
+          "time": 1775428028875,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1318,
+          "index": 0,
+          "y": 868,
+          "action": 3,
+          "time": 1775428028877,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1317,
+          "index": 0,
+          "y": 868,
+          "action": 3,
+          "time": 1775428028878,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1317,
+          "index": 0,
+          "y": 869,
+          "action": 3,
+          "time": 1775428028879,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1316,
+          "index": 0,
+          "y": 870,
+          "action": 3,
+          "time": 1775428028880,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1316,
+          "index": 0,
+          "y": 870,
+          "action": 3,
+          "time": 1775428028881,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1316,
+          "index": 0,
+          "y": 870,
+          "action": 3,
+          "time": 1775428028882,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1315,
+          "index": 0,
+          "y": 871,
+          "action": 3,
+          "time": 1775428028883,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1315,
+          "index": 0,
+          "y": 872,
+          "action": 3,
+          "time": 1775428028884,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1314,
+          "index": 0,
+          "y": 873,
+          "action": 3,
+          "time": 1775428028885,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1314,
+          "index": 0,
+          "y": 873,
+          "action": 3,
+          "time": 1775428028886,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1314,
+          "index": 0,
+          "y": 874,
+          "action": 3,
+          "time": 1775428028888,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1313,
+          "index": 0,
+          "y": 876,
+          "action": 3,
+          "time": 1775428028889,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1312,
+          "index": 0,
+          "y": 876,
+          "action": 3,
+          "time": 1775428028890,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1311,
+          "index": 0,
+          "y": 877,
+          "action": 3,
+          "time": 1775428028892,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1311,
+          "index": 0,
+          "y": 878,
+          "action": 3,
+          "time": 1775428028893,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1311,
+          "index": 0,
+          "y": 878,
+          "action": 3,
+          "time": 1775428028894,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1310,
+          "index": 0,
+          "y": 879,
+          "action": 3,
+          "time": 1775428028895,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1309,
+          "index": 0,
+          "y": 880,
+          "action": 3,
+          "time": 1775428028896,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1309,
+          "index": 0,
+          "y": 881,
+          "action": 3,
+          "time": 1775428028897,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1309,
+          "index": 0,
+          "y": 881,
+          "action": 3,
+          "time": 1775428028898,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1309,
+          "index": 0,
+          "y": 882,
+          "action": 3,
+          "time": 1775428028899,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1308,
+          "index": 0,
+          "y": 883,
+          "action": 3,
+          "time": 1775428028900,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1307,
+          "index": 0,
+          "y": 883,
+          "action": 3,
+          "time": 1775428028902,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1306,
+          "index": 0,
+          "y": 885,
+          "action": 3,
+          "time": 1775428028903,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1306,
+          "index": 0,
+          "y": 886,
+          "action": 3,
+          "time": 1775428028905,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1306,
+          "index": 0,
+          "y": 886,
+          "action": 3,
+          "time": 1775428028906,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1305,
+          "index": 0,
+          "y": 886,
+          "action": 3,
+          "time": 1775428028907,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1304,
+          "index": 0,
+          "y": 888,
+          "action": 3,
+          "time": 1775428028907,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1303,
+          "index": 0,
+          "y": 889,
+          "action": 3,
+          "time": 1775428028909,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1303,
+          "index": 0,
+          "y": 889,
+          "action": 3,
+          "time": 1775428028910,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1303,
+          "index": 0,
+          "y": 889,
+          "action": 3,
+          "time": 1775428028911,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1303,
+          "index": 0,
+          "y": 890,
+          "action": 3,
+          "time": 1775428028912,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1302,
+          "index": 0,
+          "y": 891,
+          "action": 3,
+          "time": 1775428028913,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1302,
+          "index": 0,
+          "y": 891,
+          "action": 3,
+          "time": 1775428028914,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1301,
+          "index": 0,
+          "y": 892,
+          "action": 3,
+          "time": 1775428028915,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1301,
+          "index": 0,
+          "y": 892,
+          "action": 3,
+          "time": 1775428028916,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1301,
+          "index": 0,
+          "y": 893,
+          "action": 3,
+          "time": 1775428028917,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1300,
+          "index": 0,
+          "y": 894,
+          "action": 3,
+          "time": 1775428028918,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1300,
+          "index": 0,
+          "y": 894,
+          "action": 3,
+          "time": 1775428028919,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1300,
+          "index": 0,
+          "y": 895,
+          "action": 3,
+          "time": 1775428028920,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1299,
+          "index": 0,
+          "y": 896,
+          "action": 3,
+          "time": 1775428028921,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1298,
+          "index": 0,
+          "y": 896,
+          "action": 3,
+          "time": 1775428028922,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1298,
+          "index": 0,
+          "y": 896,
+          "action": 3,
+          "time": 1775428028923,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1298,
+          "index": 0,
+          "y": 897,
+          "action": 3,
+          "time": 1775428028924,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1297,
+          "index": 0,
+          "y": 898,
+          "action": 3,
+          "time": 1775428028925,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1297,
+          "index": 0,
+          "y": 899,
+          "action": 3,
+          "time": 1775428028927,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1296,
+          "index": 0,
+          "y": 899,
+          "action": 3,
+          "time": 1775428028929,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1296,
+          "index": 0,
+          "y": 900,
+          "action": 3,
+          "time": 1775428028930,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1295,
+          "index": 0,
+          "y": 902,
+          "action": 3,
+          "time": 1775428028932,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1294,
+          "index": 0,
+          "y": 902,
+          "action": 3,
+          "time": 1775428028932,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1294,
+          "index": 0,
+          "y": 902,
+          "action": 3,
+          "time": 1775428028934,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1293,
+          "index": 0,
+          "y": 903,
+          "action": 3,
+          "time": 1775428028935,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1293,
+          "index": 0,
+          "y": 903,
+          "action": 3,
+          "time": 1775428028935,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1293,
+          "index": 0,
+          "y": 904,
+          "action": 3,
+          "time": 1775428028937,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1293,
+          "index": 0,
+          "y": 904,
+          "action": 3,
+          "time": 1775428028938,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1292,
+          "index": 0,
+          "y": 904,
+          "action": 3,
+          "time": 1775428028939,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1292,
+          "index": 0,
+          "y": 905,
+          "action": 3,
+          "time": 1775428028940,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1291,
+          "index": 0,
+          "y": 906,
+          "action": 3,
+          "time": 1775428028942,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1291,
+          "index": 0,
+          "y": 907,
+          "action": 3,
+          "time": 1775428028943,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1290,
+          "index": 0,
+          "y": 907,
+          "action": 3,
+          "time": 1775428028945,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1290,
+          "index": 0,
+          "y": 908,
+          "action": 3,
+          "time": 1775428028947,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1289,
+          "index": 0,
+          "y": 909,
+          "action": 3,
+          "time": 1775428028948,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1288,
+          "index": 0,
+          "y": 909,
+          "action": 3,
+          "time": 1775428028951,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1288,
+          "index": 0,
+          "y": 910,
+          "action": 3,
+          "time": 1775428028951,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1288,
+          "index": 0,
+          "y": 911,
+          "action": 3,
+          "time": 1775428028952,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1287,
+          "index": 0,
+          "y": 911,
+          "action": 3,
+          "time": 1775428028954,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1287,
+          "index": 0,
+          "y": 912,
+          "action": 3,
+          "time": 1775428028957,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1286,
+          "index": 0,
+          "y": 912,
+          "action": 3,
+          "time": 1775428028959,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1286,
+          "index": 0,
+          "y": 913,
+          "action": 3,
+          "time": 1775428028960,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1286,
+          "index": 0,
+          "y": 913,
+          "action": 3,
+          "time": 1775428028962,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1286,
+          "index": 0,
+          "y": 914,
+          "action": 3,
+          "time": 1775428028964,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1285,
+          "index": 0,
+          "y": 914,
+          "action": 3,
+          "time": 1775428028966,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1285,
+          "index": 0,
+          "y": 914,
+          "action": 3,
+          "time": 1775428028969,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1284,
+          "index": 0,
+          "y": 915,
+          "action": 3,
+          "time": 1775428028971,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1283,
+          "index": 0,
+          "y": 916,
+          "action": 3,
+          "time": 1775428028976,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1283,
+          "index": 0,
+          "y": 917,
+          "action": 3,
+          "time": 1775428028978,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1283,
+          "index": 0,
+          "y": 917,
+          "action": 3,
+          "time": 1775428028980,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1283,
+          "index": 0,
+          "y": 917,
+          "action": 3,
+          "time": 1775428028983,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1282,
+          "index": 0,
+          "y": 917,
+          "action": 3,
+          "time": 1775428028984,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1282,
+          "index": 0,
+          "y": 918,
+          "action": 3,
+          "time": 1775428028990,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1282,
+          "index": 0,
+          "y": 919,
+          "action": 3,
+          "time": 1775428028993,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1281,
+          "index": 0,
+          "y": 919,
+          "action": 3,
+          "time": 1775428028995,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1281,
+          "index": 0,
+          "y": 919,
+          "action": 3,
+          "time": 1775428029002,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1281,
+          "index": 0,
+          "y": 920,
+          "action": 3,
+          "time": 1775428029009,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1280,
+          "index": 0,
+          "y": 920,
+          "action": 3,
+          "time": 1775428029010,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1280,
+          "index": 0,
+          "y": 921,
+          "action": 3,
+          "time": 1775428029012,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1280,
+          "index": 0,
+          "y": 921,
+          "action": 3,
+          "time": 1775428029013,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1279,
+          "index": 0,
+          "y": 921,
+          "action": 3,
+          "time": 1775428029016,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1279,
+          "index": 0,
+          "y": 922,
+          "action": 3,
+          "time": 1775428029017,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1278,
+          "index": 0,
+          "y": 922,
+          "action": 3,
+          "time": 1775428029020,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1278,
+          "index": 0,
+          "y": 923,
+          "action": 3,
+          "time": 1775428029022,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1278,
+          "index": 0,
+          "y": 923,
+          "action": 3,
+          "time": 1775428029026,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1277,
+          "index": 0,
+          "y": 924,
+          "action": 3,
+          "time": 1775428029028,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1277,
+          "index": 0,
+          "y": 924,
+          "action": 3,
+          "time": 1775428029030,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1276,
+          "index": 0,
+          "y": 924,
+          "action": 3,
+          "time": 1775428029032,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1276,
+          "index": 0,
+          "y": 925,
+          "action": 3,
+          "time": 1775428029033,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1276,
+          "index": 0,
+          "y": 925,
+          "action": 3,
+          "time": 1775428029036,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1275,
+          "index": 0,
+          "y": 926,
+          "action": 3,
+          "time": 1775428029041,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1275,
+          "index": 0,
+          "y": 926,
+          "action": 3,
+          "time": 1775428029043,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1274,
+          "index": 0,
+          "y": 926,
+          "action": 3,
+          "time": 1775428029044,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1274,
+          "index": 0,
+          "y": 927,
+          "action": 3,
+          "time": 1775428029046,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1273,
+          "index": 0,
+          "y": 927,
+          "action": 3,
+          "time": 1775428029047,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1273,
+          "index": 0,
+          "y": 928,
+          "action": 3,
+          "time": 1775428029049,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1273,
+          "index": 0,
+          "y": 928,
+          "action": 3,
+          "time": 1775428029051,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1273,
+          "index": 0,
+          "y": 929,
+          "action": 3,
+          "time": 1775428029053,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1272,
+          "index": 0,
+          "y": 929,
+          "action": 3,
+          "time": 1775428029055,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1272,
+          "index": 0,
+          "y": 929,
+          "action": 3,
+          "time": 1775428029058,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1271,
+          "index": 0,
+          "y": 929,
+          "action": 3,
+          "time": 1775428029061,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1271,
+          "index": 0,
+          "y": 930,
+          "action": 3,
+          "time": 1775428029063,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1271,
+          "index": 0,
+          "y": 931,
+          "action": 3,
+          "time": 1775428029066,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1270,
+          "index": 0,
+          "y": 931,
+          "action": 3,
+          "time": 1775428029067,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1270,
+          "index": 0,
+          "y": 931,
+          "action": 3,
+          "time": 1775428029070,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1269,
+          "index": 0,
+          "y": 931,
+          "action": 3,
+          "time": 1775428029073,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1269,
+          "index": 0,
+          "y": 932,
+          "action": 3,
+          "time": 1775428029077,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1269,
+          "index": 0,
+          "y": 932,
+          "action": 3,
+          "time": 1775428029080,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1269,
+          "index": 0,
+          "y": 933,
+          "action": 3,
+          "time": 1775428029081,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1268,
+          "index": 0,
+          "y": 933,
+          "action": 3,
+          "time": 1775428029084,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1267,
+          "index": 0,
+          "y": 934,
+          "action": 3,
+          "time": 1775428029088,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1267,
+          "index": 0,
+          "y": 934,
+          "action": 3,
+          "time": 1775428029090,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1266,
+          "index": 0,
+          "y": 934,
+          "action": 3,
+          "time": 1775428029095,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1266,
+          "index": 0,
+          "y": 935,
+          "action": 3,
+          "time": 1775428029099,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1266,
+          "index": 0,
+          "y": 935,
+          "action": 3,
+          "time": 1775428029105,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1265,
+          "index": 0,
+          "y": 935,
+          "action": 3,
+          "time": 1775428029106,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1265,
+          "index": 0,
+          "y": 936,
+          "action": 3,
+          "time": 1775428029109,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1264,
+          "index": 0,
+          "y": 936,
+          "action": 3,
+          "time": 1775428029111,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1264,
+          "index": 0,
+          "y": 936,
+          "action": 3,
+          "time": 1775428029116,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1264,
+          "index": 0,
+          "y": 937,
+          "action": 3,
+          "time": 1775428029119,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1263,
+          "index": 0,
+          "y": 938,
+          "action": 3,
+          "time": 1775428029124,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1262,
+          "index": 0,
+          "y": 938,
+          "action": 3,
+          "time": 1775428029125,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1261,
+          "index": 0,
+          "y": 939,
+          "action": 3,
+          "time": 1775428029128,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1261,
+          "index": 0,
+          "y": 939,
+          "action": 3,
+          "time": 1775428029131,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1261,
+          "index": 0,
+          "y": 939,
+          "action": 3,
+          "time": 1775428029132,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1260,
+          "index": 0,
+          "y": 940,
+          "action": 3,
+          "time": 1775428029134,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1259,
+          "index": 0,
+          "y": 940,
+          "action": 3,
+          "time": 1775428029136,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1259,
+          "index": 0,
+          "y": 941,
+          "action": 3,
+          "time": 1775428029137,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1259,
+          "index": 0,
+          "y": 941,
+          "action": 3,
+          "time": 1775428029139,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1258,
+          "index": 0,
+          "y": 941,
+          "action": 3,
+          "time": 1775428029140,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1258,
+          "index": 0,
+          "y": 941,
+          "action": 3,
+          "time": 1775428029142,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1257,
+          "index": 0,
+          "y": 941,
+          "action": 3,
+          "time": 1775428029145,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1256,
+          "index": 0,
+          "y": 942,
+          "action": 3,
+          "time": 1775428029148,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1256,
+          "index": 0,
+          "y": 942,
+          "action": 3,
+          "time": 1775428029149,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1255,
+          "index": 0,
+          "y": 942,
+          "action": 3,
+          "time": 1775428029150,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1255,
+          "index": 0,
+          "y": 943,
+          "action": 3,
+          "time": 1775428029152,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1254,
+          "index": 0,
+          "y": 944,
+          "action": 3,
+          "time": 1775428029156,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1254,
+          "index": 0,
+          "y": 944,
+          "action": 3,
+          "time": 1775428029156,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1254,
+          "index": 0,
+          "y": 944,
+          "action": 3,
+          "time": 1775428029159,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1253,
+          "index": 0,
+          "y": 944,
+          "action": 3,
+          "time": 1775428029161,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1253,
+          "index": 0,
+          "y": 945,
+          "action": 3,
+          "time": 1775428029162,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1252,
+          "index": 0,
+          "y": 945,
+          "action": 3,
+          "time": 1775428029164,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1251,
+          "index": 0,
+          "y": 945,
+          "action": 3,
+          "time": 1775428029167,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1251,
+          "index": 0,
+          "y": 946,
+          "action": 3,
+          "time": 1775428029168,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1251,
+          "index": 0,
+          "y": 946,
+          "action": 3,
+          "time": 1775428029169,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1251,
+          "index": 0,
+          "y": 946,
+          "action": 3,
+          "time": 1775428029170,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1250,
+          "index": 0,
+          "y": 946,
+          "action": 3,
+          "time": 1775428029174,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1249,
+          "index": 0,
+          "y": 946,
+          "action": 3,
+          "time": 1775428029175,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1249,
+          "index": 0,
+          "y": 947,
+          "action": 3,
+          "time": 1775428029176,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1249,
+          "index": 0,
+          "y": 947,
+          "action": 3,
+          "time": 1775428029181,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1248,
+          "index": 0,
+          "y": 947,
+          "action": 3,
+          "time": 1775428029182,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1248,
+          "index": 0,
+          "y": 948,
+          "action": 3,
+          "time": 1775428029185,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1247,
+          "index": 0,
+          "y": 948,
+          "action": 3,
+          "time": 1775428029187,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1247,
+          "index": 0,
+          "y": 949,
+          "action": 3,
+          "time": 1775428029190,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1246,
+          "index": 0,
+          "y": 949,
+          "action": 3,
+          "time": 1775428029194,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1246,
+          "index": 0,
+          "y": 949,
+          "action": 3,
+          "time": 1775428029205,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1245,
+          "index": 0,
+          "y": 949,
+          "action": 3,
+          "time": 1775428029209,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1245,
+          "index": 0,
+          "y": 950,
+          "action": 3,
+          "time": 1775428029219,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1244,
+          "index": 0,
+          "y": 950,
+          "action": 3,
+          "time": 1775428029228,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1244,
+          "index": 0,
+          "y": 951,
+          "action": 3,
+          "time": 1775428029232,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1243,
+          "index": 0,
+          "y": 951,
+          "action": 3,
+          "time": 1775428029235,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1243,
+          "index": 0,
+          "y": 951,
+          "action": 3,
+          "time": 1775428029237,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1242,
+          "index": 0,
+          "y": 951,
+          "action": 3,
+          "time": 1775428029242,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1241,
+          "index": 0,
+          "y": 951,
+          "action": 3,
+          "time": 1775428029245,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1241,
+          "index": 0,
+          "y": 952,
+          "action": 3,
+          "time": 1775428029248,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1241,
+          "index": 0,
+          "y": 952,
+          "action": 3,
+          "time": 1775428029253,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1240,
+          "index": 0,
+          "y": 952,
+          "action": 3,
+          "time": 1775428029254,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1240,
+          "index": 0,
+          "y": 953,
+          "action": 3,
+          "time": 1775428029256,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1239,
+          "index": 0,
+          "y": 953,
+          "action": 3,
+          "time": 1775428029264,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1239,
+          "index": 0,
+          "y": 953,
+          "action": 3,
+          "time": 1775428029265,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1239,
+          "index": 0,
+          "y": 953,
+          "action": 3,
+          "time": 1775428029274,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1238,
+          "index": 0,
+          "y": 953,
+          "action": 3,
+          "time": 1775428029277,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1238,
+          "index": 0,
+          "y": 954,
+          "action": 3,
+          "time": 1775428029280,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1237,
+          "index": 0,
+          "y": 954,
+          "action": 3,
+          "time": 1775428029285,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1237,
+          "index": 0,
+          "y": 954,
+          "action": 3,
+          "time": 1775428029299,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1236,
+          "index": 0,
+          "y": 954,
+          "action": 3,
+          "time": 1775428029301,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1236,
+          "index": 0,
+          "y": 955,
+          "action": 3,
+          "time": 1775428029334,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 1,
+          "x": 1235,
+          "index": 0,
+          "y": 955,
+          "action": 1,
+          "time": 1775428029576,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 1,
+          "x": 1235,
+          "index": 0,
+          "y": 955,
+          "action": 2,
+          "time": 1775428029846,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1235,
+          "index": 0,
+          "y": 955,
+          "action": 3,
+          "time": 1775428030177,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1235,
+          "index": 0,
+          "y": 955,
+          "action": 3,
+          "time": 1775428030184,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1236,
+          "index": 0,
+          "y": 955,
+          "action": 3,
+          "time": 1775428030187,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1236,
+          "index": 0,
+          "y": 955,
+          "action": 3,
+          "time": 1775428030188,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1236,
+          "index": 0,
+          "y": 955,
+          "action": 3,
+          "time": 1775428030190,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1237,
+          "index": 0,
+          "y": 955,
+          "action": 3,
+          "time": 1775428030193,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1238,
+          "index": 0,
+          "y": 955,
+          "action": 3,
+          "time": 1775428030194,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1238,
+          "index": 0,
+          "y": 954,
+          "action": 3,
+          "time": 1775428030195,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1238,
+          "index": 0,
+          "y": 954,
+          "action": 3,
+          "time": 1775428030197,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1239,
+          "index": 0,
+          "y": 954,
+          "action": 3,
+          "time": 1775428030198,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1239,
+          "index": 0,
+          "y": 954,
+          "action": 3,
+          "time": 1775428030200,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1240,
+          "index": 0,
+          "y": 954,
+          "action": 3,
+          "time": 1775428030203,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1240,
+          "index": 0,
+          "y": 953,
+          "action": 3,
+          "time": 1775428030205,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1241,
+          "index": 0,
+          "y": 953,
+          "action": 3,
+          "time": 1775428030208,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1242,
+          "index": 0,
+          "y": 953,
+          "action": 3,
+          "time": 1775428030210,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1243,
+          "index": 0,
+          "y": 953,
+          "action": 3,
+          "time": 1775428030213,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1243,
+          "index": 0,
+          "y": 953,
+          "action": 3,
+          "time": 1775428030216,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1244,
+          "index": 0,
+          "y": 952,
+          "action": 3,
+          "time": 1775428030218,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1245,
+          "index": 0,
+          "y": 952,
+          "action": 3,
+          "time": 1775428030220,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1245,
+          "index": 0,
+          "y": 952,
+          "action": 3,
+          "time": 1775428030222,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1246,
+          "index": 0,
+          "y": 952,
+          "action": 3,
+          "time": 1775428030224,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1247,
+          "index": 0,
+          "y": 952,
+          "action": 3,
+          "time": 1775428030224,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1248,
+          "index": 0,
+          "y": 952,
+          "action": 3,
+          "time": 1775428030225,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1248,
+          "index": 0,
+          "y": 951,
+          "action": 3,
+          "time": 1775428030227,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1248,
+          "index": 0,
+          "y": 951,
+          "action": 3,
+          "time": 1775428030229,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1249,
+          "index": 0,
+          "y": 950,
+          "action": 3,
+          "time": 1775428030231,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1250,
+          "index": 0,
+          "y": 950,
+          "action": 3,
+          "time": 1775428030233,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1250,
+          "index": 0,
+          "y": 950,
+          "action": 3,
+          "time": 1775428030235,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1251,
+          "index": 0,
+          "y": 950,
+          "action": 3,
+          "time": 1775428030236,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1251,
+          "index": 0,
+          "y": 950,
+          "action": 3,
+          "time": 1775428030237,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1252,
+          "index": 0,
+          "y": 950,
+          "action": 3,
+          "time": 1775428030239,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1253,
+          "index": 0,
+          "y": 950,
+          "action": 3,
+          "time": 1775428030241,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1253,
+          "index": 0,
+          "y": 950,
+          "action": 3,
+          "time": 1775428030243,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1254,
+          "index": 0,
+          "y": 949,
+          "action": 3,
+          "time": 1775428030245,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1255,
+          "index": 0,
+          "y": 949,
+          "action": 3,
+          "time": 1775428030247,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1255,
+          "index": 0,
+          "y": 949,
+          "action": 3,
+          "time": 1775428030248,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1255,
+          "index": 0,
+          "y": 948,
+          "action": 3,
+          "time": 1775428030249,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1256,
+          "index": 0,
+          "y": 948,
+          "action": 3,
+          "time": 1775428030251,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1256,
+          "index": 0,
+          "y": 947,
+          "action": 3,
+          "time": 1775428030252,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1257,
+          "index": 0,
+          "y": 947,
+          "action": 3,
+          "time": 1775428030254,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1258,
+          "index": 0,
+          "y": 947,
+          "action": 3,
+          "time": 1775428030255,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1258,
+          "index": 0,
+          "y": 947,
+          "action": 3,
+          "time": 1775428030255,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1258,
+          "index": 0,
+          "y": 947,
+          "action": 3,
+          "time": 1775428030259,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1259,
+          "index": 0,
+          "y": 947,
+          "action": 3,
+          "time": 1775428030261,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1260,
+          "index": 0,
+          "y": 947,
+          "action": 3,
+          "time": 1775428030263,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1260,
+          "index": 0,
+          "y": 947,
+          "action": 3,
+          "time": 1775428030264,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1260,
+          "index": 0,
+          "y": 946,
+          "action": 3,
+          "time": 1775428030266,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1261,
+          "index": 0,
+          "y": 946,
+          "action": 3,
+          "time": 1775428030268,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1262,
+          "index": 0,
+          "y": 946,
+          "action": 3,
+          "time": 1775428030269,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1262,
+          "index": 0,
+          "y": 945,
+          "action": 3,
+          "time": 1775428030271,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1263,
+          "index": 0,
+          "y": 945,
+          "action": 3,
+          "time": 1775428030272,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1263,
+          "index": 0,
+          "y": 945,
+          "action": 3,
+          "time": 1775428030273,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1263,
+          "index": 0,
+          "y": 945,
+          "action": 3,
+          "time": 1775428030276,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1264,
+          "index": 0,
+          "y": 945,
+          "action": 3,
+          "time": 1775428030277,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1264,
+          "index": 0,
+          "y": 944,
+          "action": 3,
+          "time": 1775428030279,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1265,
+          "index": 0,
+          "y": 944,
+          "action": 3,
+          "time": 1775428030281,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1265,
+          "index": 0,
+          "y": 944,
+          "action": 3,
+          "time": 1775428030283,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1266,
+          "index": 0,
+          "y": 943,
+          "action": 3,
+          "time": 1775428030286,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1267,
+          "index": 0,
+          "y": 943,
+          "action": 3,
+          "time": 1775428030290,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1268,
+          "index": 0,
+          "y": 942,
+          "action": 3,
+          "time": 1775428030292,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1268,
+          "index": 0,
+          "y": 942,
+          "action": 3,
+          "time": 1775428030295,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1269,
+          "index": 0,
+          "y": 942,
+          "action": 3,
+          "time": 1775428030296,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1269,
+          "index": 0,
+          "y": 942,
+          "action": 3,
+          "time": 1775428030298,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1270,
+          "index": 0,
+          "y": 942,
+          "action": 3,
+          "time": 1775428030301,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1270,
+          "index": 0,
+          "y": 942,
+          "action": 3,
+          "time": 1775428030303,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1270,
+          "index": 0,
+          "y": 941,
+          "action": 3,
+          "time": 1775428030304,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1271,
+          "index": 0,
+          "y": 941,
+          "action": 3,
+          "time": 1775428030307,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1272,
+          "index": 0,
+          "y": 941,
+          "action": 3,
+          "time": 1775428030310,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1272,
+          "index": 0,
+          "y": 940,
+          "action": 3,
+          "time": 1775428030311,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1272,
+          "index": 0,
+          "y": 940,
+          "action": 3,
+          "time": 1775428030317,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1273,
+          "index": 0,
+          "y": 940,
+          "action": 3,
+          "time": 1775428030321,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1273,
+          "index": 0,
+          "y": 940,
+          "action": 3,
+          "time": 1775428030327,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1274,
+          "index": 0,
+          "y": 940,
+          "action": 3,
+          "time": 1775428030338,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1275,
+          "index": 0,
+          "y": 940,
+          "action": 3,
+          "time": 1775428030343,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1275,
+          "index": 0,
+          "y": 939,
+          "action": 3,
+          "time": 1775428030349,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1275,
+          "index": 0,
+          "y": 939,
+          "action": 3,
+          "time": 1775428030367,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1276,
+          "index": 0,
+          "y": 939,
+          "action": 3,
+          "time": 1775428030368,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1276,
+          "index": 0,
+          "y": 938,
+          "action": 3,
+          "time": 1775428030376,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1277,
+          "index": 0,
+          "y": 938,
+          "action": 3,
+          "time": 1775428030381,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1277,
+          "index": 0,
+          "y": 937,
+          "action": 3,
+          "time": 1775428030387,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1278,
+          "index": 0,
+          "y": 937,
+          "action": 3,
+          "time": 1775428030389,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1278,
+          "index": 0,
+          "y": 937,
+          "action": 3,
+          "time": 1775428030393,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1279,
+          "index": 0,
+          "y": 937,
+          "action": 3,
+          "time": 1775428030397,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1279,
+          "index": 0,
+          "y": 936,
+          "action": 3,
+          "time": 1775428030399,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1280,
+          "index": 0,
+          "y": 936,
+          "action": 3,
+          "time": 1775428030403,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1280,
+          "index": 0,
+          "y": 936,
+          "action": 3,
+          "time": 1775428030406,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1280,
+          "index": 0,
+          "y": 935,
+          "action": 3,
+          "time": 1775428030407,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1281,
+          "index": 0,
+          "y": 935,
+          "action": 3,
+          "time": 1775428030414,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1282,
+          "index": 0,
+          "y": 935,
+          "action": 3,
+          "time": 1775428030417,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1282,
+          "index": 0,
+          "y": 935,
+          "action": 3,
+          "time": 1775428030420,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1282,
+          "index": 0,
+          "y": 935,
+          "action": 3,
+          "time": 1775428030423,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1282,
+          "index": 0,
+          "y": 934,
+          "action": 3,
+          "time": 1775428030425,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1283,
+          "index": 0,
+          "y": 934,
+          "action": 3,
+          "time": 1775428030433,
+          "type": 1,
+          "key": 0
+        },
+        {
+          "mouseButton": 0,
+          "x": 1283,
+          "index": 0,
+          "y": 933,
+          "action": 3,
+          "time": 1775428030438,
+          "type": 1,
+          "key": 0
+        }
+      ]
+    }
+  ],
+  "createTime": 1775406967812,
+  "count": 10,
+  "name": "开传说融合石袖珍罐",
+  "icon": "D:\\intellij\\workspace\\DNFBO\\img\\icon3.png",
+  "editTime": 0
+}

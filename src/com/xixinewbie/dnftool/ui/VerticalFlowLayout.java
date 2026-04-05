@@ -1,4 +1,4 @@
-package com.xixinewbie.dnftool.ui.components;
+package com.xixinewbie.dnftool.ui;
 
 import java.awt.*;
 
@@ -15,7 +15,8 @@ public class VerticalFlowLayout extends FlowLayout {
     int vgap;
     boolean hfill;
     boolean vfill;
-
+    private int splitLineThickness=1;
+    
     public VerticalFlowLayout() {
         this(TOP, 5, 5, true, false);
     }
@@ -39,29 +40,31 @@ public class VerticalFlowLayout extends FlowLayout {
         this.hfill = hfill;
         this.vfill = vfill;
     }
-
+    
     public Dimension preferredLayoutSize(Container target) {
         Dimension tarsiz = new Dimension(0, 0);
-
+        
         for (int i = 0; i < target.getComponentCount(); i++) {
             Component m = target.getComponent(i);
-
+            
             if (m.isVisible()) {
                 Dimension d = m.getPreferredSize();
                 tarsiz.width = Math.max(tarsiz.width, d.width);
-
+                
                 if (i > 0) {
+                    // 除了第一个 item，每个 item 之前都要加 vgap 和分隔线厚度
                     tarsiz.height += vgap;
+                    tarsiz.height += splitLineThickness; // 关键：这里漏加了
                 }
-
+                
                 tarsiz.height += d.height;
             }
         }
-
+        
         Insets insets = target.getInsets();
         tarsiz.width += insets.left + insets.right + hgap * 2;
         tarsiz.height += insets.top + insets.bottom + vgap * 2;
-
+        
         return tarsiz;
     }
 
@@ -77,6 +80,7 @@ public class VerticalFlowLayout extends FlowLayout {
 
                 if (i > 0) {
                     tarsiz.height += vgap;
+                    tarsiz.height += splitLineThickness;
                 }
 
                 tarsiz.height += d.height;
@@ -124,7 +128,13 @@ public class VerticalFlowLayout extends FlowLayout {
             if (m.isVisible()) {
                 int px = x + (width - md.width) / 2;
                 m.setLocation(px, y);
-                y += vgap + md.height;
+                y += md.height; // 组件高度
+                
+                // 如果不是最后一个组件，并且显示分隔线，则在组件下方预留分隔线和vgap的空间
+                if (i < last - 1) {
+                    y += splitLineThickness; // 分隔线厚度
+                }
+                y += vgap; // vgap
             }
         }
     }
@@ -155,8 +165,13 @@ public class VerticalFlowLayout extends FlowLayout {
                 } else {
                     m.setSize(d.width, d.height);
                 }
-
-                if (y + d.height > maxheight) {
+                // 计算当前组件加上分隔线和vgap后的总高度
+                int currentItemTotalHeight = d.height;
+                if (i > 0) { // 除了第一个组件，其他组件前面都有vgap
+                    currentItemTotalHeight += vgap;
+                        currentItemTotalHeight += splitLineThickness;
+                }
+                if (y + currentItemTotalHeight > maxheight) {
                     placeItems(target, x, insets.top + vgap, colw, maxheight - y, start, i);
                     y = d.height;
                     x += hgap + colw;

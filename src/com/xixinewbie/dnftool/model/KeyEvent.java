@@ -2,7 +2,7 @@ package com.xixinewbie.dnftool.model;
 
 import java.util.Objects;
 
-public class Action {
+public class KeyEvent {
     public int index;
     @TYPE
     public final int type;
@@ -14,7 +14,7 @@ public class Action {
     @ACTION
     public int action;
 
-    public Action(@TYPE int type) {
+    public KeyEvent(@TYPE int type) {
         this.type = type;
     }
 
@@ -38,8 +38,8 @@ public class Action {
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
-        Action action = (Action) o;
-        return type == action.type && key == action.key && mouseButton == action.mouseButton;
+        KeyEvent keyEvent = (KeyEvent) o;
+        return type == keyEvent.type && key == keyEvent.key && mouseButton == keyEvent.mouseButton;
     }
 
     @Override

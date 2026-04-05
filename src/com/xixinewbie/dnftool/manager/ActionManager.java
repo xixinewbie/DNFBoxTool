@@ -1,20 +1,42 @@
 package com.xixinewbie.dnftool.manager;
 
-import com.xixinewbie.dnftool.model.Global;
 import com.xixinewbie.dnftool.model.Task;
 
-public class ActionManager {
-    public static Global global;
+import java.util.ArrayList;
+import java.util.List;
 
-    public static synchronized void createTask(int position, Task task) {
-        if (global != null) {
-            global.addTask(position, task);
+public class ActionManager {
+    public static List<Task> tasks = new ArrayList<>();
+    public static boolean ignoreMove;
+    public static boolean highSpeed;
+    public static int widthGameWindow;
+    public static int heightGameWindow;
+    
+    public static synchronized void addTask(Task task) {
+        if (tasks != null) {
+            tasks.add(task);
         }
     }
-
+    
     public static synchronized void removeTask(Task task) {
-        if (global != null) {
-            global.removeTask(task);
+        if (tasks != null) {
+            tasks.remove(task);
         }
+    }
+    
+    public static int getWidthGameWindow() {
+        return widthGameWindow;
+    }
+    
+    public static void setWidthGameWindow(int widthGameWindow) {
+        ActionManager.widthGameWindow = widthGameWindow;
+    }
+    
+    public static int getHeightGameWindow() {
+        return heightGameWindow;
+    }
+    
+    public static void setHeightGameWindow(int heightGameWindow) {
+        ActionManager.heightGameWindow = heightGameWindow;
     }
 }

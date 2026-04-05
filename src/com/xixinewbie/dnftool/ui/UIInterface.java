@@ -1,19 +1,13 @@
 package com.xixinewbie.dnftool.ui;
 
 import com.xixinewbie.dnftool.manager.*;
-import com.xixinewbie.dnftool.model.Global;
+import com.xixinewbie.dnftool.model.Callback;
+import com.xixinewbie.dnftool.model.Operation;
 import com.xixinewbie.dnftool.model.Task;
-import com.xixinewbie.dnftool.ui.components.NumberInputFilter;
-import com.xixinewbie.dnftool.ui.components.VerticalFlowLayout;
-import com.xixinewbie.dnftool.util.FileUtil;
 import com.xixinewbie.dnftool.util.JsonUtil;
 import com.xixinewbie.dnftool.util.S;
 
 import javax.swing.*;
-import javax.swing.event.DocumentEvent;
-import javax.swing.event.DocumentListener;
-import javax.swing.filechooser.FileNameExtensionFilter;
-import javax.swing.text.Document;
 import javax.swing.text.PlainDocument;
 import java.awt.*;
 import java.awt.event.*;
@@ -21,84 +15,59 @@ import java.io.File;
 import java.util.List;
 import java.util.logging.Logger;
 
+import static com.xixinewbie.dnftool.manager.ColorUIManager.*;
+
 public class UIInterface extends JFrame {
-
-    private final Color colorRecord = Color.decode("#8cdd8c");
-    private final Color colorPlay = Color.decode("#dddd8c");
-    private final Color colorDelete = Color.decode("#dd8c8c");
-    private final Color colorAddTask = Color.decode("#8cdd8c");
-    private final Color colorAddSleepTask = Color.decode("#d19275");
-    private final Color colorPlayGlobal = Color.decode("#8c8cdd");
-    private final Color colorSave = Color.decode("#ffaa66");
-    private final Color colorLoad = Color.decode("#ffaa66");
-    private final Color colorTaskListViewBackground = Color.decode("#fbfbfb");
-    private final Color colorItemBackground = Color.decode("#ffffff");
-    private final Color colorItemBackgroundSleep = Color.decode("#efefef");
-    private final Color colorItemBackgroundPlaying = Color.decode("#ff9977");
-    private final Color colorItemBackgroundSelected = Color.decode("#e0e0ff");
-    private final Color colorButtonDisabled = Color.decode("#efefef");
-
-    private static String srt1 = "javax.swing.plaf.metal.MetalLookAndFeel";
-    private static String srt2 = "javax.swing.plaf.nimbus.NimbusLookAndFeel";
-    private static String srt3 = "com.sun.java.swing.plaf.windows.WindowsLookAndFeel";
-    private static String srt4 = "com.sun.java.swing.plaf.windows.WindowsClassicLookAndFeel";
-    private static String srt5 = "com.sun.java.swing.plaf.motif.MotifLookAndFeel";
-    private static String srt6 = "com.sun.java.swing.plaf.gtk.GTKLookAndFeel";
-
-    private static final long MIN_SLEEP_TIME = 200;
-
+    
     private int margin = 12;
-    private int wRootPanel = 400;
-    private int hRootPanel = 400;
+    private int margin2 = 8;
+    private int margin3 = 6;
+    
+    private int wTitleBar = 500;
+    private int hTitleBar = 38;
+    private int xTitleBar = 0;
+    private int yTitleBar = 0;
+    
+    private int wRootPanel = wTitleBar;
     private int xRootPanel = 0;
     private int yRootPanel = 0;
-
-    private int wScroll = wRootPanel - margin * 2;
-    private int hScroll = 200;
-    private int xScroll = margin;
-    private int yScroll = margin;
-
-    private int wOperation = wRootPanel;
-    private int hOperation = hRootPanel - hScroll - margin;
-    private int xOperation = 0;
-    private int yOperation = yScroll + hScroll + margin;
-
-    private int xWindow, yWindow;
-    private int xMouse, yMouse;
-
+    
+    private int wTaskPanel = wRootPanel;
+    private int hTaskPanel = 440;
+    private int xTaskPanel = 0;
+    private int yTaskPanel = hTitleBar + 1;
+    
+    private int wSwitch = 40;
+    private int hSwitch = 24;
+    
+    private int wOptions = wRootPanel;
+    private int hOptions = 80;
+    private int xOptions = 0;
+    private int yOptions = yTaskPanel + hTaskPanel + 1;
+    
+    private int hRootPanel = yOptions + hOptions;
+    
     private JPanel taskListView;
-    private JButton buttonAddTask;
-    private JButton buttonAddSleepTask;
-    private JLabel addPositionTitleView;
-    private JTextField addPositionView;
-    private JTextField countText;
-    private JButton buttonSave;
-    private JButton buttonLoad;
-    private JButton buttonPlayGlobal;
-    private JCheckBox jumpMoveCheckBox;
-    private JCheckBox highSpeedCheckBox;
-
-    private DocumentListener globalCountChangeListener;
+    private RoundedButton buttonAddTask;
+    private RoundedButton buttonLoad;
+    private SmoothSwitch jumpMoveCheckBox;
+    private SmoothSwitch highSpeedCheckBox;
+    
+    
     private ItemListener jumpMouseMoveListener;
     private ItemListener highSpeedListener;
-
+    
     public UIInterface() {
-
-        setFonts(this);
-        //设置主题
-//        try {
-//            UIManager.setLookAndFeel(srt1);
-//            SwingUtilities.updateComponentTreeUI(this);
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//        JFrame.setDefaultLookAndFeelDecorated(true);
-
+        setUndecorated(true);
+        super.setTitle("DNF脚本录制器");
+        initFonts(this);
+        getContentPane().setBackground(null);
+        
         setResizable(false);
         UIManager.put("Button.disabledBackground", colorButtonDisabled);
-        ImageIcon icon = new ImageIcon("icon.png");
+        ImageIcon icon = new ImageIcon("img/icon.png");
         setIconImage(icon.getImage());
-
+        
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         addWindowListener(new WindowAdapter() {
             @Override
@@ -107,691 +76,501 @@ public class UIInterface extends JFrame {
                 System.exit(0);
             }
         });
-
+        
         Toolkit tk = Toolkit.getDefaultToolkit();
         Dimension dimension = tk.getScreenSize();
-
+        
         int w_screen = dimension.width;
         int h_screen = dimension.height;
-
-        JPanel bigPanel = initRootPanel();
-
-        initScroll(bigPanel);
-
-        JPanel downPanel = initOperationPanel(bigPanel);
-        initButtonPanel(downPanel);
-
+        
+        JPanel rootPanel = initRootPanel();
+        initTitleBar(rootPanel);
+        initScroll(rootPanel);
+        initButtonPanel(rootPanel);
+        
         setAlwaysOnTop(true);
         pack();
-        setLocation(w_screen - getWidth() - 25, h_screen - getHeight() - 50);
+        setLocation(w_screen - getWidth() - 10, h_screen - getHeight() - 60);
         this.setVisible(true);
-
         initUIData();
     }
-
-    public static void setFonts(JFrame frame) {
-        // 设置全局字体
-        Font globalFont = new Font("Microsoft YaHei UI", Font.PLAIN, 12);
-        UIManager.put("Button.font", globalFont);
-        UIManager.put("CheckBox.font", globalFont);
-        UIManager.put("RadioButton.font", globalFont);
-        UIManager.put("ToggleButton.font", globalFont);
-        UIManager.put("ComboBox.font", globalFont);
-        UIManager.put("TabbedPane.font", globalFont);
-        UIManager.put("MenuBar.font", globalFont);
-        UIManager.put("Menu.font", globalFont);
-        UIManager.put("MenuItem.font", globalFont);
-        UIManager.put("PopupMenu.font", globalFont);
-        UIManager.put("OptionPane.font", globalFont);
-        UIManager.put("ProgressBar.font", globalFont);
-        UIManager.put("ScrollPane.font", globalFont);
-        UIManager.put("Viewport.font", globalFont);
-        UIManager.put("TableHeader.font", globalFont);
-        UIManager.put("Table.font", globalFont);
-        UIManager.put("TextField.font", globalFont);
-        UIManager.put("TextArea.font", globalFont);
-        UIManager.put("PasswordField.font", globalFont);
-        UIManager.put("EditorPane.font", globalFont);
-        UIManager.put("FormattedTextField.font", globalFont);
-        UIManager.put("Spinner.font", globalFont);
-        UIManager.put("Label.font", globalFont);
-        UIManager.put("List.font", globalFont);
-        UIManager.put("Tree.font", globalFont);
-        // 应用全局字体
-        SwingUtilities.updateComponentTreeUI(frame);
+    
+    public void initTitleBar(JPanel rootPanel) {
+        JPanel titleBar = new JPanel();
+        titleBar.setLayout(null);
+        titleBar.setBounds(xTitleBar, yTitleBar, wTitleBar, hTitleBar);
+        titleBar.setBackground(colorBackgroundTitleBar);
+        
+        JLabel titleLabel = new JLabel("DNF脚本录制器");
+        titleLabel.setForeground(colorTextTitleBar);
+        ColorUIManager.setTextSize(titleBar, 12);
+        titleLabel.setBounds(10, (hTitleBar - 30) / 2 - 2, 200, 30);
+        titleBar.add(titleLabel);
+        
+        int wClose = (int) (hTitleBar * 1.2f);
+        int hClose = hTitleBar;
+        // --- 添加关闭按钮 (RoundedButton) ---
+        RoundedButton closeButton = new RoundedButton();
+        closeButton.setRadius(0);
+        ColorUIManager.setDefaultIcon(closeButton, "close.png", 8);
+        closeButton.setBounds(wTitleBar - wClose, 0, wClose, hClose);
+        closeButton.addActionListener(e -> System.exit(0));
+        closeButton.setBackground(null);
+        titleBar.add(closeButton);
+        
+        RoundedButton minButton = new RoundedButton();
+        minButton.setRadius(0);
+        ColorUIManager.setDefaultIcon(minButton, "min.png", 8);
+        minButton.setBounds(wTitleBar - wClose * 2, 0, wClose, hClose);
+        minButton.addActionListener(e -> UIInterface.this.setExtendedState(JFrame.ICONIFIED));
+        minButton.setBackground(null);
+        titleBar.add(minButton);
+        
+        rootPanel.add(titleBar);
+        
+        // --- 重要：添加拖拽逻辑 ---
+        addWindowDragListener(titleBar);
     }
-
+    
+    private int mouseX, mouseY;
+    
+    private void addWindowDragListener(JPanel titleBar) {
+        titleBar.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mousePressed(MouseEvent e) {
+                mouseX = e.getX();
+                mouseY = e.getY();
+            }
+        });
+        
+        titleBar.addMouseMotionListener(new MouseAdapter() {
+            @Override
+            public void mouseDragged(MouseEvent e) {
+                // 计算位移并移动 JFrame
+                int x = e.getXOnScreen();
+                int y = e.getYOnScreen();
+                setLocation(x - mouseX, y - mouseY);
+            }
+        });
+    }
+    
     public JPanel initRootPanel() {
-        JPanel bigPanel = new JPanel();
-        bigPanel.setLayout(null);
-        bigPanel.setPreferredSize(new Dimension(wRootPanel, hRootPanel));
-        bigPanel.setLocation(xRootPanel, yRootPanel);
-        bigPanel.setBackground(Color.WHITE);
-        add(bigPanel);
-        return bigPanel;
+        JPanel rootPanel = new JPanel();
+        rootPanel.setLayout(null);
+        rootPanel.setPreferredSize(new Dimension(wRootPanel, hRootPanel));
+        rootPanel.setLocation(xRootPanel, yRootPanel);
+        rootPanel.setBackground(colorBackgroundItem);
+        add(rootPanel);
+        return rootPanel;
     }
-
-    private void initScroll(JPanel bigPanel) {
+    
+    private void initScroll(JPanel rootPanel) {
+        
         taskListView = new JPanel();
         taskListView.setLayout(new VerticalFlowLayout(0, 0, 0, true, false));
-        taskListView.setBackground(colorTaskListViewBackground);
-
+        taskListView.setBackground(colorBackground);
+        
         JScrollPane jScrollPane = new JScrollPane(taskListView);
         jScrollPane.getVerticalScrollBar().setUnitIncrement(10);
         jScrollPane.getVerticalScrollBar().setPreferredSize(new Dimension(5, 0));
-        jScrollPane.setBounds(xScroll, yScroll, wScroll, hScroll);
+        jScrollPane.setBounds(margin2, 0, wTaskPanel - margin2 * 2, hTaskPanel);
         jScrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
         jScrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
-
-        bigPanel.add(jScrollPane);
+        ColorUIManager.setScrollBar(jScrollPane);
+        jScrollPane.setBackground(colorBackground);
+        JPanel background = new JPanel();
+        background.setLayout(null);
+        background.setBorder(BorderFactory.createEmptyBorder(10, 5, 10, 5));
+        background.setBackground(colorBackground);
+        background.setBounds(xTaskPanel, yTaskPanel, wTaskPanel, hTaskPanel);
+        background.add(jScrollPane);
+        rootPanel.add(background);
     }
-
-    public JPanel initOperationPanel(JPanel container) {
-        JPanel operationPanel = new JPanel();
-        operationPanel.setLayout(null);
-        operationPanel.setBounds(xOperation, yOperation, wOperation, hOperation);
-        operationPanel.setBackground(Color.white);
-        container.add(operationPanel);
-        return operationPanel;
-    }
-
-    public void initButtonPanel(JPanel container) {
-        int w_container = container.getWidth();
-        int h_container = container.getHeight();
-        int w_view = w_container;
-
-        int countChild = 4;
-
-        int wAddButton = 80;
+    
+    public void initButtonPanel(JPanel rootPanel) {
+        JPanel container = new JPanel();
+        container.setLayout(null);
+        container.setBounds(xOptions, yOptions, wOptions, hOptions);
+        container.setBackground(colorBackground);
+        rootPanel.add(container);
+        
+        
+        int wAddButton = 100;
         int hAddButton = 30;
-
-        buttonAddTask = new JButton("插入子任务");
+        
+        buttonAddTask = new RoundedButton("创建新脚本");
         buttonAddTask.setBackground(colorAddTask);
         buttonAddTask.setMargin(new Insets(0, 0, 0, 0));
         buttonAddTask.setBorder(null);
         buttonAddTask.setFocusable(false);
+        int xAddTask = margin;
+        int yAddTask = margin;
+        buttonAddTask.setBounds(xAddTask, yAddTask, wAddButton, hAddButton);
+        ColorUIManager.setDefaultIcon(buttonAddTask, "add.png");
+        ColorUIManager.setTextColor(buttonAddTask, colorTextDark);
+        container.add(buttonAddTask);
+        
         buttonAddTask.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                ActionManager.createTask(S.intValue(addPositionView.getText()), new Task(S.now()).setCount(1).setAccess(true));
-                saveToFile();
-                flushGlobalUI(true);
+                ActionManager.addTask(new Task().setCreateTime(S.now()).setCount(1));
+                StorageManager.saveToFile();
+                reloadList();
+                flushGlobalUI();
             }
         });
-        int xAddTask = margin;
-        int yAddTask = 0;
-        buttonAddTask.setBounds(xAddTask, yAddTask, wAddButton, hAddButton);
-        container.add(buttonAddTask);
-
-        buttonAddSleepTask = new JButton("插入休眠");
-        buttonAddSleepTask.setBackground(colorAddSleepTask);
-        buttonAddSleepTask.setMargin(new Insets(0, 0, 0, 0));
-        buttonAddSleepTask.setBorder(null);
-        buttonAddSleepTask.setFocusable(false);
-        buttonAddSleepTask.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent actionEvent) {
-                ActionManager.createTask(S.intValue(addPositionView.getText()), new Task(S.now()).setSleepTime(MIN_SLEEP_TIME).setCount(1).setAccess(true));
-                saveToFile();
-                flushGlobalUI(true);
-            }
-        });
-        int xAddSleepTask = xAddTask + wAddButton + margin;
-        int yAddSleepTask = 0;
-        buttonAddSleepTask.setBounds(xAddSleepTask, yAddSleepTask, wAddButton, hAddButton);
-        container.add(buttonAddSleepTask);
-
-        int wPositionTitle = 80;
-        int hPositionTitle = 30;
-        int xPositionTitle = xAddSleepTask + wAddButton + margin;
-        int yPositionTitle = 0;
-        addPositionTitleView = new JLabel("插入位置");
-        addPositionTitleView.setBounds(xPositionTitle, yPositionTitle, wPositionTitle, hPositionTitle);
-        container.add(addPositionTitleView);
-
-        int wPosition = 50;
-        int hPosition = 30;
-        int xPosition = xPositionTitle + wPosition + 5;
-        int yPosition = 0;
-        addPositionView = new JTextField();
-        ((PlainDocument) addPositionView.getDocument()).setDocumentFilter(new NumberInputFilter());
-        addPositionView.setBounds(xPosition, yPosition, wPosition, hPosition);
-        addPositionView.setHorizontalAlignment(JTextField.CENTER);
-        container.add(addPositionView);
-
-        int wButton = 120;
-        int hButton = 40;
-
-        buttonPlayGlobal = new JButton();
-        buttonPlayGlobal.setContentAreaFilled(true);
-        buttonPlayGlobal.setFont(UIManager.getFont("large.font"));
-        buttonPlayGlobal.setMargin(new Insets(0, 0, 0, 0));
-        buttonPlayGlobal.setBackground(colorPlayGlobal);
-        buttonPlayGlobal.setBorder(null);
-        buttonPlayGlobal.setFocusable(false);
-        buttonPlayGlobal.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent actionEvent) {
-                play(null);
-            }
-        });
-        int wPlay = 180;
-        int hPlay = 60;
-        int xPlay = container.getWidth() - wPlay - margin;
-        int yPlay = container.getHeight() - hPlay - margin * 2;
-        buttonPlayGlobal.setBounds(xPlay, yPlay, wPlay, hPlay);
-        container.add(buttonPlayGlobal);
-
-        buttonSave = new JButton("保存");
-        buttonSave.setContentAreaFilled(true);
-        buttonSave.setMargin(new Insets(0, 0, 0, 0));
-        buttonSave.setBackground(colorSave);
-        buttonSave.setBorder(null);
-        buttonSave.setFocusable(false);
-        buttonSave.setFocusable(false);
-        buttonSave.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent actionEvent) {
-                JFileChooser chooser = new JFileChooser();
-                chooser.setCurrentDirectory(new File("."));
-                chooser.setFileFilter(new FileNameExtensionFilter("配置文件", "init"));
-                chooser.setMultiSelectionEnabled(false);
-                int result = chooser.showSaveDialog(buttonSave);
-                if (result == JFileChooser.APPROVE_OPTION) {
-                    File file = chooser.getSelectedFile();
-                    if (file == null) {
-                        return;
-                    }
-                    String fileName = file.getName();
-                    if (S.isEmpty(fileName)) {
-                        fileName = "未命名.init";
-                    }
-                    if (!fileName.endsWith(".init")) {
-                        fileName = file.getName() + ".init";
-                    }
-                    file = new File(file.getParent(), fileName);
-                    S.s("save to :" + file.getAbsoluteFile());
-                    saveConfigToFile(file);
-                }
-            }
-        });
-        int xSave = margin;
-        int ySave = container.getHeight() - hButton - margin * 2;
-        int wSave = 60;
-        int hSave = 40;
-        buttonSave.setBounds(xSave, ySave, wSave, hSave);
-        container.add(buttonSave);
-
-        buttonLoad = new JButton("加载");
-        buttonLoad.setContentAreaFilled(true);
+        
+        int wButton = 80;
+        int hButton = 30;
+        
+        buttonLoad = new RoundedButton("加载");
+        buttonLoad.setBackground(colorLoad);
+        buttonLoad.setMargin(new Insets(0, 0, 0, 0));
         buttonLoad.setBorder(null);
         buttonLoad.setFocusable(false);
-        buttonLoad.setMargin(new Insets(0, 0, 0, 0));
-        buttonLoad.setBackground(colorLoad);
+        ColorUIManager.setTextColor(buttonLoad, colorTextDark);
         buttonLoad.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                JFileChooser chooser = new JFileChooser();
-                chooser.setCurrentDirectory(new File("."));
-                chooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
-                chooser.setMultiSelectionEnabled(false);
-                chooser.setFileFilter(new FileNameExtensionFilter("配置文件(.init)", "init"));
-                int result = chooser.showOpenDialog(buttonSave);
-                if (result == JFileChooser.APPROVE_OPTION) {
-                    File file = chooser.getSelectedFile();
-                    S.s("load from :" + file.getAbsoluteFile());
-                    readFromFile(file.getAbsolutePath());
-                    saveToFile();
-                    flushGlobalUI(true);
+                // 使用 java.awt.FileDialog 调用原生打开窗口
+                FileDialog fileDialog = new FileDialog(UIInterface.this, "选择脚本", FileDialog.LOAD);
+                fileDialog.setDirectory(".");
+                // Windows 下可以设置过滤器提示，但 FileDialog 的过滤器通常通过 setFile 设置初始匹配
+                fileDialog.setFile("*" + StorageManager.FILE_EXTENSION);
+                UIInterface.this.setAlwaysOnTop(false);
+                fileDialog.setVisible(true);
+                UIInterface.this.setAlwaysOnTop(true);
+                fileDialog.setAlwaysOnTop(true);
+                
+                String directory = fileDialog.getDirectory();
+                String fileName = fileDialog.getFile();
+                
+                if (directory != null && fileName != null) {
+                    File file = new File(directory, fileName);
+                    S.s("load from :" + file.getAbsolutePath());
+                    String json = StorageManager.read(file.getAbsolutePath());
+                    
+                    Task newTask = JsonUtil.toTask(json);
+                    if (newTask != null) {
+                        newTask.setCreateTime(S.now());
+                        ActionManager.addTask(newTask);
+                        StorageManager.saveToFile();
+                        reloadList();
+                        flushGlobalUI();
+                    }
                 }
             }
         });
-        int xLoad = xSave + wSave + margin;
-        int yLoad = container.getHeight() - hButton - margin * 2;
-        int wLoad = 60;
-        int hLoad = 40;
+        int xLoad = xAddTask + wAddButton + margin;
+        int yLoad = margin;
+        int wLoad = wButton;
+        int hLoad = hButton;
         buttonLoad.setBounds(xLoad, yLoad, wLoad, hLoad);
         container.add(buttonLoad);
-
-        int xCountLabel = margin * 2;
-        int yCountLabel = yAddTask + margin + hAddButton;
-        int wCountLabel = 50;
-        int hCountLabel = hAddButton;
-        JLabel countLabel = new JLabel("执行次数");
-        countLabel.setBounds(xCountLabel, yCountLabel, wCountLabel, hCountLabel);
-        container.add(countLabel);
-
-        int xCount = xCountLabel + wCountLabel + margin;
-        int yCount = yCountLabel;
-        int wCount = 60;
-        int hCount = hAddButton;
-        countText = new JTextField();
-        countText.setEditable(true);
-        countText.setBounds(xCount, yCount, wCount, hCount);
-        container.add(countText);
-        globalCountChangeListener = new DocumentListener() {
-            @Override
-            public void insertUpdate(DocumentEvent e) {
-                ActionManager.global.count = S.intValue(countText.getText());
-                saveToFile();
-            }
-
-            @Override
-            public void removeUpdate(DocumentEvent e) {
-                ActionManager.global.count = S.intValue(countText.getText());
-                saveToFile();
-            }
-
-            @Override
-            public void changedUpdate(DocumentEvent e) {
-                ActionManager.global.count = S.intValue(countText.getText());
-                saveToFile();
-            }
-        };
+        
         jumpMouseMoveListener = new ItemListener() {
             @Override
             public void itemStateChanged(ItemEvent e) {
-                ActionManager.global.ignoreMove = jumpMoveCheckBox.isSelected();
-                saveToFile();
+                ActionManager.ignoreMove = jumpMoveCheckBox.isSelected();
+                StorageManager.saveToFile();
             }
         };
         highSpeedListener = new ItemListener() {
             @Override
             public void itemStateChanged(ItemEvent e) {
-                ActionManager.global.highSpeed = highSpeedCheckBox.isSelected();
-                saveToFile();
+                ActionManager.highSpeed = highSpeedCheckBox.isSelected();
+                StorageManager.saveToFile();
             }
         };
-        ((PlainDocument) countText.getDocument()).setDocumentFilter(new NumberInputFilter());
-
-        countText.setHorizontalAlignment(JTextField.CENTER);
-
-        int xJumpMoveLabel = xCount + wCount + margin;
-        int yJumpMoveLabel = yCount;
-        int wJumpMoveLabel = 80;
-        int hJumpMoveLabel = hAddButton;
-        JLabel JumpMoveLabel = new JLabel("跳过鼠标移动");
-        JumpMoveLabel.setBounds(xJumpMoveLabel, yJumpMoveLabel, wJumpMoveLabel, hJumpMoveLabel);
-        container.add(JumpMoveLabel);
-
-        int xJumpMove = xJumpMoveLabel + wJumpMoveLabel;
-        int yJumpMove = yJumpMoveLabel;
-        int wJumpMove = 30;
-        int hJumpMove = hAddButton;
-        jumpMoveCheckBox = new JCheckBox();
-        jumpMoveCheckBox.setBackground(null);
+        
+        
+        int xJumpMoveLabel = xLoad + wAddButton + margin3;
+        int yJumpMoveLabel = margin;
+        int wJumpMoveLabel = wButton;
+        int hJumpMoveLabel = hButton;
+        JLabel jumpMoveLabel = new JLabel("跳过鼠标移动");
+        jumpMoveLabel.setBounds(xJumpMoveLabel, yJumpMoveLabel, wJumpMoveLabel, hJumpMoveLabel);
+        jumpMoveLabel.setOpaque(true);
+        jumpMoveLabel.setForeground(colorTextSwitchTitle);
+        jumpMoveLabel.setBackground(ColorUIManager.colorSwitchTitleBackground);
+        jumpMoveLabel.setHorizontalAlignment(SwingConstants.RIGHT);
+        jumpMoveLabel.setVerticalAlignment(SwingConstants.CENTER);
+        container.add(jumpMoveLabel);
+        
+        int xJumpMove = xJumpMoveLabel + wJumpMoveLabel + 8;
+        int yJumpMove = yJumpMoveLabel + 3;
+        int wJumpMove = wSwitch;
+        int hJumpMove = hSwitch;
+        jumpMoveCheckBox = new SmoothSwitch();
+        jumpMoveCheckBox.setSelected(ActionManager.ignoreMove);
         jumpMoveCheckBox.setBounds(xJumpMove, yJumpMove, wJumpMove, hJumpMove);
         container.add(jumpMoveCheckBox);
-
-
-        int xHighSpeedLabel = xJumpMove + wJumpMove + margin;
-        int yHighSpeedLabel = yCount;
-        int wHighSpeedLabel = 65;
-        int hHighSpeedLabel = hAddButton;
-        JLabel HighSpeedLabel = new JLabel("点击低延迟");
-        HighSpeedLabel.setBounds(xHighSpeedLabel, yHighSpeedLabel, wHighSpeedLabel, hHighSpeedLabel);
-        container.add(HighSpeedLabel);
-
-        int xHighSpeed = xHighSpeedLabel + wHighSpeedLabel;
-        int yHighSpeed = yHighSpeedLabel;
-        int wHighSpeed = 30;
-        int hHighSpeed = hAddButton;
-        highSpeedCheckBox = new JCheckBox();
-        highSpeedCheckBox.setBackground(null);
+        
+        
+        int xHighSpeedLabel = xJumpMove + wJumpMove + margin3;
+        int yHighSpeedLabel = margin;
+        int wHighSpeedLabel = wButton;
+        int hHighSpeedLabel = hButton;
+        JLabel highSpeedLabel = new JLabel("点击低延迟");
+        highSpeedLabel.setHorizontalAlignment(SwingConstants.RIGHT);
+        highSpeedLabel.setVerticalAlignment(SwingConstants.CENTER);
+        highSpeedLabel.setOpaque(true);
+        highSpeedLabel.setBackground(ColorUIManager.colorSwitchTitleBackground);
+        highSpeedLabel.setForeground(colorTextSwitchTitle);
+        highSpeedLabel.setBounds(xHighSpeedLabel, yHighSpeedLabel, wHighSpeedLabel, hHighSpeedLabel);
+        container.add(highSpeedLabel);
+        
+        int xHighSpeed = xHighSpeedLabel + wHighSpeedLabel + 8;
+        int yHighSpeed = yHighSpeedLabel + 3;
+        int wHighSpeed = wSwitch;
+        int hHighSpeed = hSwitch;
+        highSpeedCheckBox = new SmoothSwitch();
+        highSpeedCheckBox.setSelected(ActionManager.highSpeed);
         highSpeedCheckBox.setBounds(xHighSpeed, yHighSpeed, wHighSpeed, hHighSpeed);
         container.add(highSpeedCheckBox);
-
     }
-
-    private void saveConfigToFile(File file) {
-        FileUtil.saveConfigToFile(JsonUtil.toJson(ActionManager.global), file);
-    }
-
-    private JPanel getSleepItem(final Task task, int index) {
+    
+    private void getChildItem(final Task task, JPanel taskListView) {
         if (task == null) {
-            return null;
+            return;
         }
-        final JPanel item = new JPanel();
-        int wItem = wScroll - 15;
-        int hItem = 40;
+        final ItemPanel item = new ItemPanel();
+        int wItem = wTaskPanel - margin2 * 2;
+        int hItem = 80;
         item.setPreferredSize(new Dimension(wItem, hItem));
-        item.setBorder(null);
         item.setLayout(null);
-
-        int wAccess = 30;
-        int wTaskName = 125;
-        int xAccess = 10;
-        int wButton = 50;
-        int hButton = 30;
-        int wSleepTimeTitle = 80;
-        int wSleepTime = 80;
-        int xSleepTimeTitle = (wItem - wSleepTimeTitle - wSleepTime - margin) / 2;
-        int xSleepTime = xSleepTimeTitle + wSleepTimeTitle + margin;
-        int xDelete = wItem - wButton - 5;
+        
+        int wIcon = (int) (hItem * 0.7f);
+        int hIcon = wIcon;
+        int xIcon = margin;
+        int yIcon = (hItem - hIcon) / 2;
+        
+        int wTaskName = 230;
+        int hTaskName = 30;
+        int xTaskName = xIcon + wIcon + margin2;
+        int yTaskName = yIcon - 5;
         //
-        JCheckBox accessCheckBox = new JCheckBox();
-        accessCheckBox.setSelected(task.isAccess());
-        accessCheckBox.setSize(new Dimension(wAccess, wAccess));
-        accessCheckBox.setLocation(xAccess, 5);
-        accessCheckBox.setBackground(null);
+        int wPlay = 70;
+        int hPlay = 30;
+        int xPlay = wItem - wPlay - 15;
+        int yPlay = hItem - margin - hPlay;
         //
-        JLabel jLabelSleepTimeTitle = new JLabel("休眠时长(毫秒)");
-        jLabelSleepTimeTitle.setSize(wSleepTimeTitle, hButton);
-        jLabelSleepTimeTitle.setLocation(xSleepTimeTitle, 5);
-
-        final JTextField sleepTimeView = new JTextField(String.valueOf(task.getSleepTime()));
-        sleepTimeView.setSize(wSleepTime, hButton);
-        sleepTimeView.setLocation(xSleepTime, 5);
-        sleepTimeView.setHorizontalAlignment(JTextField.CENTER);
-        ((PlainDocument) sleepTimeView.getDocument()).setDocumentFilter(new NumberInputFilter());
-        sleepTimeView.getDocument().addDocumentListener(new DocumentListener() {
-
+        int wEdit = 70;
+        int hEdit = 30;
+        int xEdit = xPlay - wEdit - margin2;
+        int yEdit = yPlay;
+        
+        int wCountTitle = 65;
+        int hCountTitle = 30;
+        int xCountTitle = xTaskName;
+        int yCountTitle = yTaskName + hTaskName;
+        
+        int wCount = 40;
+        int hCount = 30;
+        int xCount = xCountTitle + wCountTitle;
+        int yCount = yCountTitle + 2;
+        
+        int wCreateTime = wItem - wTaskName;
+        int hCreateTime = 20;
+        int xCreateTime = wItem - wCreateTime - 15;
+        int yCreateTime = yTaskName + 2;
+        
+        RoundedButton iconView = new RoundedButton();
+        iconView.setMargin(new Insets(0, 0, 0, 0));
+        iconView.setBounds(xIcon, yIcon, wIcon, hIcon);
+        iconView.setBackground(null);
+        ColorUIManager.setIcon(iconView, task.getIcon(), iconView.getWidth());
+        //
+        JTextField taskNameView = new JTextField();
+        taskNameView.setSize(wTaskName, hTaskName);
+        ColorUIManager.setTextSize(taskNameView, textSizeTaskName);
+        taskNameView.setLocation(xTaskName, yTaskName);
+        taskNameView.setBackground(colorTaskNameBackground);
+        ColorUIManager.setTextColor(taskNameView, colorText);
+        ColorUIManager.setField(taskNameView, new Callback<String>() {
             @Override
-            public void insertUpdate(DocumentEvent e) {
-                task.setSleepTime(S.max(MIN_SLEEP_TIME, S.longValue(sleepTimeView.getText())));
-                saveToFile();
-            }
-
-            @Override
-            public void removeUpdate(DocumentEvent e) {
-                task.setSleepTime(S.max(MIN_SLEEP_TIME, S.longValue(sleepTimeView.getText())));
-                saveToFile();
-            }
-
-            @Override
-            public void changedUpdate(DocumentEvent e) {
-                task.setSleepTime(S.max(MIN_SLEEP_TIME, S.longValue(sleepTimeView.getText())));
-                saveToFile();
-            }
-        });
-
-        final JButton buttonDelete = new JButton();
-        buttonDelete.setMargin(new Insets(0, 0, 0, 0));
-        buttonDelete.setText("删除");
-        buttonDelete.setBackground(colorDelete);
-        buttonDelete.setBorder(null);
-        buttonDelete.setFocusable(false);
-        buttonDelete.setSize(wButton, hButton);
-        buttonDelete.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent actionEvent) {
-                Object[] options = {" 确定 ", " 取消 "};
-                int response = JOptionPane.showOptionDialog(buttonDelete, "确定要删除该等待任务吗？", "删除", JOptionPane.YES_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
-                if (response == 0) {
-                    ActionManager.removeTask(task);
-                    saveToFile();
-                    flushGlobalUI(true);
-                    setTitle("已删除等待任务");
-                }
+            public void onResult(String s) {
+                task.setName(s);
+                StorageManager.saveToFile();
             }
         });
-        buttonDelete.setLocation(xDelete, 5);
-
-        final Call call = new Call() {
+        
+        //
+        JLabel countTitleView = new JLabel("执行次数:");
+        countTitleView.setSize(wCountTitle, hCountTitle);
+        countTitleView.setLocation(xCountTitle, yCountTitle);
+        countTitleView.setOpaque(true);
+        countTitleView.setHorizontalAlignment(SwingConstants.LEFT);
+        countTitleView.setVerticalAlignment(SwingConstants.CENTER);
+        countTitleView.setBackground(colorTaskNameBackground);
+        ColorUIManager.setTextSize(countTitleView, textSizeButton);
+        ColorUIManager.setTextColor(countTitleView, colorText);
+        //
+        final JTextField countView = new JTextField(String.valueOf(task.getCount()));
+        countView.setSize(wCount, hCount);
+        countView.setLocation(xCount, yCount);
+        countView.setHorizontalAlignment(JTextField.CENTER);
+        countView.setBackground(ColorUIManager.colorCount);
+        ColorUIManager.setField(countView, new Callback<String>() {
             @Override
-            public void initView() {
-                boolean enable = isButtonEnabled();
-                boolean access = task.isAccess();
-                accessCheckBox.setEnabled(enable);
-                sleepTimeView.setEnabled(enable);
-                jLabelSleepTimeTitle.setEnabled(access && enable);
-                buttonDelete.setEnabled(enable);
-                flushGlobalUI(false);
-
-                Task playingTask = PlayManager.isPlaying() ? PlayManager.getPlayingTask() : null;
-                boolean isPlaying = PlayManager.isPlaying() && playingTask != null && playingTask.id == task.id;
-                item.setBackground(isPlaying ? colorItemBackgroundPlaying : colorItemBackgroundSleep);
-            }
-        };
-
-        accessCheckBox.addItemListener(new ItemListener() {
-            @Override
-            public void itemStateChanged(ItemEvent e) {
-                task.setAccess(accessCheckBox.isSelected());
-                saveToFile();
-                call.initView();
+            public void onResult(String s) {
+                task.setCount(S.intValue(countView.getText()));
+                StorageManager.saveToFile();
             }
         });
-
-        addItemMouseColor(task, item, item, accessCheckBox, sleepTimeView, buttonDelete);
-
-        item.add(accessCheckBox);
-        item.add(jLabelSleepTimeTitle);
-        item.add(sleepTimeView);
-        item.add(buttonDelete);
-
-        call.initView();
-
-        return item;
-    }
-
-    private JPanel getItem(final Task task, int index) {
-        if (task == null) {
-            return null;
-        }
-        final JPanel item = new JPanel();
-        int wItem = wScroll - 15;
-        int hItem = 40;
-        item.setPreferredSize(new Dimension(wItem, hItem));
-        item.setBorder(null);
-        item.setLayout(null);
-
-        int wButton = 50;
-        int hButton = 30;
-        int wAccess = 30;
-        int wTaskName = 90;
-        int xAccess = 10;
-        int xName = xAccess + wAccess;
-        int xDelete = wItem - wButton - 5;
-        int xRun = xDelete - wButton - 5;
-        int xReset = xRun - wButton - 5;
-        int xCount = xReset - wButton - 5;
+        ColorUIManager.setTextSize(countView, textSizeButton);
+        ColorUIManager.setTextColor(countView, colorText);
+        ((PlainDocument) countView.getDocument()).setDocumentFilter(new NumberInputFilter(999));
         //
-        JCheckBox accessCheckBox = new JCheckBox();
-        accessCheckBox.setSelected(task.isAccess());
-        accessCheckBox.setSize(new Dimension(wAccess, wAccess));
-        accessCheckBox.setBackground(null);
-        accessCheckBox.setLocation(xAccess, 5);
+        final JButton buttonEdit = new RoundedButton();
+        ColorUIManager.setDefaultIcon(buttonEdit, "edit.png");
+        ColorUIManager.setTextColor(buttonEdit, colorTextLight);
+        buttonEdit.setMargin(new Insets(0, 0, 0, 0));
+        buttonEdit.setText("编辑");
+        buttonEdit.setBackground(colorBackgroundEdit);
+        buttonEdit.setBorder(null);
+        buttonEdit.setFocusable(false);
+        buttonEdit.setSize(wEdit, hEdit);
+        buttonEdit.setLocation(xEdit, yEdit);
+        
         //
-        JLabel jLabelName = new JLabel();
-        jLabelName.setSize(wTaskName, hButton);
-        jLabelName.setLocation(xName, 5);
-
-        //
-        final JTextField labelCount = new JTextField(String.valueOf(task.getCount()));
-        labelCount.setSize(wButton, hButton);
-        labelCount.setLocation(xCount, 5);
-        labelCount.setHorizontalAlignment(JTextField.CENTER);
-        ((PlainDocument) labelCount.getDocument()).setDocumentFilter(new NumberInputFilter());
-        //
-        final JButton buttonRecord = new JButton("录制");
-        buttonRecord.setSize(50, 30);
-        buttonRecord.setBackground(colorRecord);
-        buttonRecord.setBorder(null);
-        buttonRecord.setFocusable(false);
-        buttonRecord.setMargin(new Insets(0, 0, 0, 0));
-        buttonRecord.setLocation(xReset, 5);
-        //
-
-        final JButton buttonDelete = new JButton();
-        buttonDelete.setMargin(new Insets(0, 0, 0, 0));
-        buttonDelete.setText("删除");
-        buttonDelete.setBackground(colorDelete);
-        buttonDelete.setBorder(null);
-        buttonDelete.setFocusable(false);
-        buttonDelete.setSize(wButton, hButton);
-        buttonDelete.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent actionEvent) {
-                Object[] options = {" 确定 ", " 取消 "};
-                int response = JOptionPane.showOptionDialog(buttonDelete, "确定删除该任务吗？", "删除任务", JOptionPane.YES_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
-                if (response == 0) {
-                    ActionManager.removeTask(task);
-                    saveToFile();
-                    flushGlobalUI(true);
-                    setTitle("已删除" + getName(task));
-                }
-            }
-        });
-        buttonDelete.setLocation(xDelete, 5);
-        //
-        final JButton buttonPlay = new JButton();
+        final RoundedButton buttonPlay = new RoundedButton();
         buttonPlay.setText("执行");
-        buttonPlay.setBackground(colorPlay);
-        buttonPlay.setSize(wButton, hButton);
+        ColorUIManager.setDefaultIcon(buttonPlay, "play.png");
+        ColorUIManager.setTextColor(buttonPlay, colorTextLight);
+        buttonPlay.setBackground(colorBackgroundPlay);
+        buttonPlay.setSize(wPlay, hPlay);
         buttonPlay.setBorder(null);
         buttonPlay.setFocusable(false);
         buttonPlay.setMargin(new Insets(0, 0, 0, 0));
-        buttonPlay.setLocation(xRun, 5);
-
-        final Call call = new Call() {
+        buttonPlay.setLocation(xPlay, yPlay);
+        buttonPlay.setBorderPainted(false);
+        buttonPlay.setFocusPainted(false);
+        
+        item.setFlushUI(new ItemPanel.UIFlusher() {
             @Override
-            public void initView() {
-                jLabelName.setText(getName(task));
-
-                boolean enable = isButtonEnabled();
-                boolean access = task.isAccess();
-                boolean gameExists = isGameExists();
-
-                accessCheckBox.setEnabled(enable);
-                buttonPlay.setEnabled(gameExists && access && enable && !task.isEmpty());
-                buttonDelete.setEnabled(enable);
-                buttonRecord.setEnabled(gameExists && access && enable);
-                jLabelName.setEnabled(enable);
-                labelCount.setEnabled(enable);
-                flushGlobalUI(false);
-
+            public void onFlushUI() {
+                taskNameView.setText(getName(task));
+                taskNameView.setCaretPosition(0);
+                ColorUIManager.setIcon(iconView, task.getIcon(), iconView.getWidth());
+                
+                countView.setText(String.valueOf(task.getCount()));
+                countView.setCaretPosition(0);
+                
                 Task playingTask = PlayManager.isPlaying() ? PlayManager.getPlayingTask() : null;
-                boolean isPlaying = PlayManager.isPlaying() && playingTask != null && playingTask.id == task.id;
-                item.setBackground(isPlaying ? colorItemBackgroundPlaying : colorItemBackground);
-                buttonPlay.setText(isPlaying ? "执行中" : "执行");
-            }
-        };
-        accessCheckBox.addItemListener(new ItemListener() {
-            @Override
-            public void itemStateChanged(ItemEvent e) {
-                task.setAccess(accessCheckBox.isSelected());
-                saveToFile();
-                call.initView();
-            }
-        });
-        labelCount.getDocument().addDocumentListener(new DocumentListener() {
-            @Override
-            public void insertUpdate(DocumentEvent e) {
-                task.setCount(S.intValue(labelCount.getText()));
-                saveToFile();
-            }
-
-            @Override
-            public void removeUpdate(DocumentEvent e) {
-                task.setCount(S.intValue(labelCount.getText()));
-                saveToFile();
-            }
-
-            @Override
-            public void changedUpdate(DocumentEvent e) {
-                task.setCount(S.intValue(labelCount.getText()));
-                saveToFile();
+                boolean isPlaying = PlayManager.isPlaying();
+                boolean isRecording = RecordManager.isRecording();
+                boolean enable = !isPlaying && !isRecording;
+                boolean isCurrentPlaying = playingTask != null && playingTask.getCreateTime() == task.getCreateTime();
+                if (isPlaying) {
+                    S.s("isCurrentPlaying:" + isCurrentPlaying + "   playingTask:" + getName(playingTask) + "   = " + getName(task));
+                }
+                boolean gameExists = true || WindowPositionManager.gameWindowExists;
+                
+                buttonPlay.setEnabled(gameExists && !isPlaying && !isRecording && !task.isEnpty());
+                buttonPlay.setLoading(isCurrentPlaying);
+                taskNameView.setEnabled(enable);
+                countView.setEnabled(enable);
+                buttonEdit.setEnabled(enable);
+                
+                item.setBackground(isCurrentPlaying ? colorBackgroundItemPlaying : colorBackgroundItem);
+                
             }
         });
         buttonPlay.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                play(task);
-                call.initView();
-            }
-        });
-        jLabelName.addMouseListener(new MouseAdapter() {
-            @Override
-            public void mouseClicked(MouseEvent e) {
-                if (!isButtonEnabled()) {
-                    return;
-                }
-                String result = JOptionPane.showInputDialog(jLabelName, "请输入任务名称", task.getName());
-                if (!S.isEmpty(result)) {
-                    task.setName(result);
-                    saveToFile();
-                    call.initView();
-                }
-            }
-        });
-        buttonRecord.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent actionEvent) {
-                Object[] options = {"确定", "取消"};
-                RecordManager.startWaitingRecording(task, new RecordManager.Callback() {
+                PlayManager.startPlay(task, null, new TaskExecutor.Callback() {
                     @Override
-                    public void onEnd(Task task) {
-                        setTitle("[" + task.getName() + "]录制完毕,共包含" + task.size() + "帧");
-                        ActionManager.global.setWidthWindow(WindowPositionManager.wGameWindow);
-                        ActionManager.global.setHeightWindow(WindowPositionManager.hGameWindow);
-                        saveToFile();
-                        flushGlobalUI(true);
+                    public void onRun(Operation operation, int count) {
+                        setTitle(getName(operation) + " " + count + "/" + operation.getCount());
+                        flushGlobalUI();
                     }
-
+                    
                     @Override
-                    public void onCancel(Task task) {
-                        setTitle("[" + task.getName() + "]录制已取消");
-                        flushGlobalUI(true);
+                    public void onEnd() {
+                        setTitle("执行完毕");
+                        flushGlobalUI();
                     }
-
+                    
                     @Override
-                    public void onWaiting(Task task) {
-                        setTitle("等待录制，按下F12开始，Esc或Pause取消");
-                        flushGlobalUI(true);
-                    }
-
-                    @Override
-                    public void onStart(Task task) {
-                        setTitle("[" + task.getName() + "]正在录制");
-                        flushGlobalUI(true);
+                    public void onBreak(String quitMsg) {
+                        setTitle("执行中断：" + quitMsg);
+                        flushGlobalUI();
                     }
                 });
+                flushGlobalUI();
             }
         });
-
-        addItemMouseColor(task, item, accessCheckBox, buttonRecord, item, jLabelName, labelCount, buttonPlay);
-
-        item.add(accessCheckBox);
-        item.add(jLabelName);
-        item.add(labelCount);
-        item.add(buttonRecord);
-        item.add(buttonDelete);
+        buttonEdit.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                TaskEditDialog dialog = new TaskEditDialog(UIInterface.this, task);
+                dialog.setVisible(true); // This blocks until the dialog is closed
+                
+                if (!ActionManager.tasks.contains(task)) {
+                    taskListView.remove(item);
+                    taskListView.revalidate();
+                    taskListView.repaint();
+                }
+                flushGlobalUI();
+            }
+        });
+        
+        JLabel createTimeView = new JLabel(S.getTime(task.getCreateTime()));
+        createTimeView.setSize(wCreateTime, hCreateTime);
+        createTimeView.setLocation(xCreateTime, yCreateTime);
+        createTimeView.setOpaque(true);
+        createTimeView.setHorizontalAlignment(SwingConstants.RIGHT);
+        createTimeView.setVerticalAlignment(SwingConstants.CENTER);
+        createTimeView.setBackground(null);
+        ColorUIManager.setTextSize(createTimeView, 12);
+        ColorUIManager.setTextColor(createTimeView, colorText);
+        
+        
+        addItemMouseColor(task, item, buttonEdit, item, taskNameView, countView, buttonPlay);
+        
+        item.add(iconView);
+        item.add(taskNameView);
+        item.add(countView);
+        item.add(buttonEdit);
         item.add(buttonPlay);
-
-        call.initView();
-
-        return item;
+        item.add(countTitleView);
+        item.add(createTimeView);
+        
+        taskListView.add(item);
+        
+        item.flushUI();
     }
-
+    
     private void addItemMouseColor(Task task, JPanel item, JComponent... components) {
         MouseListener mouseListener = new MouseListener() {
             @Override
             public void mouseClicked(MouseEvent mouseEvent) {
-
+            
             }
-
+            
             @Override
             public void mousePressed(MouseEvent mouseEvent) {
-
+            
             }
-
+            
             @Override
             public void mouseReleased(MouseEvent mouseEvent) {
-
+            
             }
-
+            
             @Override
             public void mouseEntered(MouseEvent mouseEvent) {
-                if (!isRecording() && !isPlaying()) {
-                    item.setBackground(colorItemBackgroundSelected);
+                if (!PlayManager.isPlaying() && !RecordManager.isRecording()) {
+                    item.setBackground(colorBackgroundItemSelected);
                 }
             }
-
+            
             @Override
             public void mouseExited(MouseEvent mouseEvent) {
-                if (!isRecording() && !isPlaying()) {
-                    item.setBackground(task.getSleepTime() > 0 ? colorItemBackgroundSleep : colorItemBackground);
+                if (!PlayManager.isPlaying() && !RecordManager.isRecording()) {
+                    item.setBackground(colorBackgroundItem);
                 }
             }
         };
@@ -799,152 +578,83 @@ public class UIInterface extends JFrame {
             component.addMouseListener(mouseListener);
         }
     }
-
+    
     private void initUIData() {
-        readFromFile(FileUtil.FILE_PATH);
+        StorageManager.loadAllSprites();
         WindowPositionManager.detector = new WindowPositionManager.WindowDetector() {
             @Override
             public void onWindowChange(boolean exists) {
                 if (!exists) {
                     setTitle("未检测到游戏窗口");
                 } else {
-                    setTitle("DNF脚本录制器  by西西同学");
+                    setTitle("检测到游戏窗口");
                 }
-                flushGlobalUI(true);
+                flushGlobalUI();
             }
         };
         WindowPositionManager.init();
-        Global global = ActionManager.global;
-
-        Document document = countText.getDocument();
-        countText.setText(String.valueOf(global == null ? 1 : global.count));
-        document.addDocumentListener(globalCountChangeListener);
-
-        flushGlobalUI(true);
+        
+        reloadList();
+        flushGlobalUI();
     }
-
-    private void flushGlobalUI(boolean includeList) {
-
+    
+    private void flushGlobalUI() {
+        boolean enable = !PlayManager.isPlaying() && !RecordManager.isRecording();
+        
         jumpMoveCheckBox.removeItemListener(jumpMouseMoveListener);
-        jumpMoveCheckBox.setSelected(ActionManager.global.ignoreMove);
+        jumpMoveCheckBox.setSelected(ActionManager.ignoreMove);
         jumpMoveCheckBox.addItemListener(jumpMouseMoveListener);
-
+        jumpMoveCheckBox.setEnabled(enable);
+        
         highSpeedCheckBox.removeItemListener(highSpeedListener);
-        highSpeedCheckBox.setSelected(ActionManager.global.highSpeed);
+        highSpeedCheckBox.setSelected(ActionManager.highSpeed);
         highSpeedCheckBox.addItemListener(highSpeedListener);
-
-        addPositionView.setText(String.valueOf(ActionManager.global.getTaskSize()));
-
-        buttonAddTask.setEnabled(isButtonEnabled());
-        buttonAddSleepTask.setEnabled(isButtonEnabled());
-        addPositionView.setEnabled(isButtonEnabled());
-        countText.setEnabled(isButtonEnabled());
-        jumpMoveCheckBox.setEnabled(isButtonEnabled());
-        highSpeedCheckBox.setEnabled(isButtonEnabled());
-        buttonSave.setEnabled(isButtonEnabled());
-        buttonLoad.setEnabled(isButtonEnabled());
-
-        flushPlayGlobalButton();
-
-        if (includeList) {
-            taskListView.removeAll();
-            List<Task> tasks = ActionManager.global.copy();
-            for (int i = 0; i < tasks.size(); i++) {
-                Task task = tasks.get(i);
-                JPanel jPanel = task.getSleepTime() > 0 ? getSleepItem(task, i) : getItem(task, i);
-                taskListView.add(jPanel);
+        highSpeedCheckBox.setEnabled(enable);
+        
+        buttonAddTask.setEnabled(enable);
+        buttonLoad.setEnabled(enable);
+        
+        flushList();
+    }
+    
+    private void flushList() {
+        int childCount = taskListView.getComponentCount();
+        for (int i = 0; i < childCount; i++) {
+            Component component = taskListView.getComponent(i);
+            if (component instanceof ItemPanel itemPanel) {
+                itemPanel.flushUI();
             }
-
-            taskListView.revalidate();
-            taskListView.repaint();
         }
     }
-
-    private boolean couldPlayGlobal() {
-        return isGameExists() && isButtonEnabled() && ActionManager.global.accessTaskSize() > 0;
-    }
-
-    private void flushPlayGlobalButton() {
-        buttonPlayGlobal.setEnabled(couldPlayGlobal());
-        Global global = ActionManager.global;
-        buttonPlayGlobal.setText("执行所有任务(" + (global == null ? 0 : global.accessTaskSize()) + ")");
-    }
-
-    private void saveToFile() {
-        if (ActionManager.global.getWidthWindow() == 0 || ActionManager.global.getHeightWindow() == 0) {
-            if (WindowPositionManager.wGameWindow > 0) {
-                ActionManager.global.setWidthWindow(WindowPositionManager.wGameWindow);
-            }
-            if (WindowPositionManager.hGameWindow > 0) {
-                ActionManager.global.setHeightWindow(WindowPositionManager.hGameWindow);
-            }
-            saveToFile();
+    
+    private void reloadList() {
+        taskListView.removeAll();
+        List<Task> tasks = ActionManager.tasks;
+        for (int i = 0; i < tasks.size(); i++) {
+            Task task = tasks.get(i);
+            getChildItem(task, taskListView);
         }
-        if (FileUtil.write(JsonUtil.toJson(ActionManager.global))) {
-            S.s("保存成功");
-        } else {
-            S.e("保存失败");
-        }
+        taskListView.revalidate();
+        taskListView.repaint();
     }
-
-    private void readFromFile(String filePath) {
-        String json = FileUtil.read(filePath);
-        ActionManager.global = JsonUtil.toGlobal(json);
-    }
-
-    private void play(Task task) {
-        PlayManager.startPlay(task, new TaskExecutor.Callback() {
-            @Override
-            public void onRun(Task task, int count) {
-                setTitle(getName(task) + " " + count + "/" + task.getCount());
-                flushGlobalUI(true);
-            }
-
-            @Override
-            public void onEnd() {
-                setTitle("执行完毕");
-                flushGlobalUI(true);
-            }
-
-            @Override
-            public void onBreak(String quitMsg) {
-                setTitle("执行中断：" + quitMsg);
-                flushGlobalUI(true);
-            }
-        });
-        flushGlobalUI(false);
-    }
-
+    
     @Override
     public void setTitle(String title) {
-        super.setTitle(title);
         S.s(title);
     }
-
+    
     public String getName(Task task) {
-        return S.isEmpty(task.getName()) ? "任务" + task.id : task.getName();
+        return S.isEmpty(task.getName()) ? "脚本" + task.getCreateTime() : task.getName();
+    }
+    
+    public String getName(Operation operation) {
+        return S.isEmpty(operation.getName()) ? "任务" + operation.getCreateTime() : operation.getName();
     }
 
-    public boolean isButtonEnabled() {
-        return !isPlaying() && !isRecording();
-    }
-
-    public boolean isGameExists() {
-        return WindowPositionManager.gameWindowExists;
-    }
-
-    public boolean isPlaying() {
-        return PlayManager.isPlaying();
-    }
-
-    public boolean isRecording() {
-        return RecordManager.isRecording();
-    }
-
-    interface Call {
-        void initView();
-    }
-
+//    public boolean isButtonEnabled() {
+//        return !isPlaying() && !isRecording();
+//    }
+    
     /*
         使用jlink来编译一个缩减版JRE
         jlink --add-modules java.base,java.datatransfer,java.desktop,java.logging --output custom-jre

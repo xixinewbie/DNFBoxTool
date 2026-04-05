@@ -5,107 +5,124 @@ import java.util.List;
 import java.util.Objects;
 
 public class Task {
-    private String name;
-    public final long id;
     private int count;
-    private List<Action> actions;
-    private long sleepTime;
-    private boolean access;
-
-    public Task(long id) {
-        this.id = id;
-    }
-
-    public void addAction(Action action) {
+    private long createTime;
+    private long editTime;
+    private String name;
+    private String icon;
+    private List<Operation> operations;
+    
+    public void setOperations(List<Operation> operations) {
         synchronized (Task.class) {
-            if (actions == null) {
-                actions = new ArrayList<>();
+            this.operations = operations;
+        }
+    }
+    
+    public List<Operation> copy() {
+        synchronized (Task.class) {
+            return operations == null ? new ArrayList<>(0) : new ArrayList<>(operations);
+        }
+    }
+    
+    public void addOperation(int position, Operation operation) {
+        synchronized (Task.class) {
+            if (operations == null) {
+                operations = new ArrayList<>();
             }
-            actions.add(action);
-        }
-    }
-
-    public void clearAction() {
-        synchronized (Task.class) {
-            if (actions != null) {
-                actions.clear();
+            if (position >= 0 && position < operations.size()) {
+                operations.add(position, operation);
+            } else {
+                operations.add(operation);
             }
         }
     }
-
-    public List<Action> copyActions() {
+    
+    public void clearOperation() {
         synchronized (Task.class) {
-            return actions == null ? new ArrayList<>(0) : new ArrayList<>(actions);
+            if (operations != null) {
+                operations.clear();
+            }
         }
     }
-
-    public void setActions(List<Action> actions) {
+    
+    public void removeOperation(Operation operation) {
         synchronized (Task.class) {
-            this.actions = actions;
+            if (operations != null) {
+                operations.remove(operation);
+            }
         }
     }
-
+    
+    public boolean contains(Operation operation) {
+        synchronized (Task.class) {
+            return operations != null && operations.contains(operation);
+        }
+    }
+    
+    public int getOperationSize() {
+        synchronized (Task.class) {
+            return operations == null ? 0 : operations.size();
+        }
+    }
+    
+    public boolean isEnpty() {
+        return operations == null || operations.isEmpty();
+    }
+    
+    public String getName() {
+        return name;
+    }
+    
+    public Task setName(String name) {
+        this.name = name;
+        return this;
+    }
+    
     public int getCount() {
         return count;
     }
-
+    
     public Task setCount(int count) {
         this.count = count;
         return this;
     }
-
-    public boolean isEmpty() {
-        return size() == 0;
+    
+    public long getCreateTime() {
+        return createTime;
     }
-
-    public int size() {
-        synchronized (Task.class) {
-            return this.actions == null ? 0 : this.actions.size();
-        }
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public long getSleepTime() {
-        return sleepTime;
-    }
-
-    public Task setSleepTime(long sleepTime) {
-        this.sleepTime = sleepTime;
+    
+    public Task setCreateTime(long createTime) {
+        this.createTime = createTime;
         return this;
     }
-
-    public boolean isAccess() {
-        return access;
+    
+    public long getEditTime() {
+        return editTime;
     }
-
-    public Task setAccess(boolean access) {
-        this.access = access;
+    
+    public Task setEditTime(long editTime) {
+        this.editTime = editTime;
         return this;
     }
-
+    
+    public String getIcon() {
+        return icon;
+    }
+    
+    public Task setIcon(String icon) {
+        this.icon = icon;
+        return this;
+    }
+    
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         Task task = (Task) o;
-        return id == task.id;
+        return createTime == task.createTime;
     }
-
+    
     @Override
     public int hashCode() {
-        return Objects.hashCode(id);
-    }
-
-    @Override
-    public String toString() {
-        return "Task{" +
-                "name='" + name + '\'' +
-                '}';
+        return Objects.hashCode(createTime);
     }
 }
