@@ -16,8 +16,8 @@ public class PlayManager {
         Listener.setKeyboardListener(new Listener.KeyboardListener() {
             @Override
             public void onKeyUp(int key) {
-                if (key == KeyEvent.VK_ESCAPE || key == KeyEvent.VK_PAUSE) {
-                    stop("按下Esc或Pause");
+                if (key == KeyEvent.VK_PAUSE) {
+                    stop("用户按下Pause终止了脚本");
                 }
             }
         });
@@ -28,7 +28,7 @@ public class PlayManager {
             public void onMove(int x, int y) {
                 if ((S.now() - timeStart) > 1000) {
                     if (taskExecutor != null && !taskExecutor.isSameMousePosition(x, y)) {
-                        stop("鼠标移动");
+                        stop("用户移动鼠标终止了脚本");
                     }
                 }
             }
