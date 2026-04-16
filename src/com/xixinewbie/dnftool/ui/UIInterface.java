@@ -213,7 +213,11 @@ public class UIInterface extends JFrame {
         buttonAddTask.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                ActionManager.addTask(new Task().setCreateTime(S.now()).setCount(1));
+                ActionManager.addTask(
+                        new Task().setCreateTime(S.now())
+                                .setWindowSize(WindowPositionManager.wGameWindow, WindowPositionManager.hGameWindow)
+                                .setCount(1)
+                );
                 StorageManager.saveToFile();
                 reloadList();
                 flushGlobalUI();

@@ -614,8 +614,6 @@ public class TaskEditDialog extends JDialog {
                     @Override
                     public void onEnd(Operation operation) {
                         setTitle("[" + operation.getName() + "]录制完毕,共包含" + operation.size() + "帧");
-                        ActionManager.setWidthGameWindow(WindowPositionManager.wGameWindow);
-                        ActionManager.setHeightGameWindow(WindowPositionManager.hGameWindow);
                         StorageManager.saveToFile();
                         flushGlobalUI();
                     }

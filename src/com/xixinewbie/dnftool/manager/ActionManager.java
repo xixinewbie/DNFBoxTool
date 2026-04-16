@@ -9,8 +9,6 @@ public class ActionManager {
     public static List<Task> tasks = new ArrayList<>();
     public static boolean ignoreMove;
     public static boolean highSpeed;
-    public static int widthGameWindow;
-    public static int heightGameWindow;
     
     public static synchronized void addTask(Task task) {
         if (tasks != null) {
@@ -22,21 +20,5 @@ public class ActionManager {
         if (tasks != null) {
             tasks.remove(task);
         }
-    }
-    
-    public static int getWidthGameWindow() {
-        return widthGameWindow;
-    }
-    
-    public static void setWidthGameWindow(int widthGameWindow) {
-        ActionManager.widthGameWindow = widthGameWindow;
-    }
-    
-    public static int getHeightGameWindow() {
-        return heightGameWindow;
-    }
-    
-    public static void setHeightGameWindow(int heightGameWindow) {
-        ActionManager.heightGameWindow = heightGameWindow;
     }
 }

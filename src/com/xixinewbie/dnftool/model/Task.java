@@ -11,6 +11,7 @@ public class Task {
     private String name;
     private String icon;
     private List<Operation> operations;
+    private int wGameWindow, hGameWindow;
     
     public void setOperations(List<Operation> operations) {
         synchronized (Task.class) {
@@ -111,6 +112,20 @@ public class Task {
     
     public Task setIcon(String icon) {
         this.icon = icon;
+        return this;
+    }
+    
+    public int getGameWindowH() {
+        return hGameWindow;
+    }
+    
+    public int getGameWindowW() {
+        return wGameWindow;
+    }
+    
+    public Task setWindowSize(int wGameWindow, int hGameWindow) {
+        this.wGameWindow = wGameWindow;
+        this.hGameWindow = hGameWindow;
         return this;
     }
     

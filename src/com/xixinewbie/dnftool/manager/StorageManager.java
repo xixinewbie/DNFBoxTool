@@ -23,14 +23,6 @@ public class StorageManager {
     }
     
     public static void saveToFile() {
-        if (ActionManager.getWidthGameWindow() == 0 || ActionManager.getHeightGameWindow() == 0) {
-            if (WindowPositionManager.wGameWindow > 0) {
-                ActionManager.setWidthGameWindow(WindowPositionManager.wGameWindow);
-            }
-            if (WindowPositionManager.hGameWindow > 0) {
-                ActionManager.setHeightGameWindow(WindowPositionManager.hGameWindow);
-            }
-        }
         if (write(JsonUtil.toJson(ActionManager.tasks))) {
             S.s("保存成功");
         } else {
@@ -48,6 +40,7 @@ public class StorageManager {
     
     public static boolean write(String json, String pathString) {
         if (S.isEmpty(json)) {
+            S.e("json is empty");
             return false;
         }
         try {

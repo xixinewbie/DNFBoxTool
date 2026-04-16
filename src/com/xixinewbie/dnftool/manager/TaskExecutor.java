@@ -29,8 +29,11 @@ public class TaskExecutor extends Thread {
     private final boolean highSpeed;
     private String quitMsg;
     
+    private final int taskWindowWidth;
+    
     public TaskExecutor(Task task, Operation operation, Callback callback) {
         this.task = task;
+        this.taskWindowWidth = task.getGameWindowW();
         this.operation = operation;
         this.callback = callback;
         this.ignoreMouseMove = ActionManager.ignoreMove;
@@ -39,6 +42,10 @@ public class TaskExecutor extends Thread {
     
     @Override
     public void run() {
+        if (taskWindowWidth <= 0) {
+            callback.onBreak("脚本信息缺失或者版本不匹配");
+            return;
+        }
         //第一次执行时，等待300毫秒，防止第一个event被忽略。
         S.sleep(300);
         int count = 0;
@@ -171,7 +178,7 @@ public class TaskExecutor extends Thread {
             mouseLastY = point.y;
         }
         if (keyEvent.type == KeyEvent.TYPE.mouse) {
-            float scalePercent = (float) WindowPositionManager.wGameWindow / ActionManager.getWidthGameWindow();
+            float scalePercent = (float) WindowPositionManager.wGameWindow / taskWindowWidth;
             int x = (int) (keyEvent.x * scalePercent) + WindowPositionManager.xGameWindow;
             int y = (int) (keyEvent.y * scalePercent) + WindowPositionManager.yGameWindow;
             mouseLastX = x;

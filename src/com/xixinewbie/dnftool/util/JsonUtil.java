@@ -22,6 +22,8 @@ public class JsonUtil {
         taskObject.put("count", task.getCount());
         taskObject.put("name", task.getName());
         taskObject.put("icon", task.getIcon());
+        taskObject.put("wWindow", task.getGameWindowW());
+        taskObject.put("hWindow", task.getGameWindowH());
         JSONArray operationArray = new JSONArray();
         taskObject.put("operations", operationArray);
         if (list != null) {
@@ -52,9 +54,6 @@ public class JsonUtil {
             return null;
         }
         JSONObject jsonObject = new JSONObject();
-        
-        jsonObject.put("wWindow", ActionManager.getWidthGameWindow());
-        jsonObject.put("hWindow", ActionManager.getHeightGameWindow());
         jsonObject.put("ignoreMove", ActionManager.ignoreMove);
         jsonObject.put("highSpeed", ActionManager.highSpeed);
         JSONArray taskArray = new JSONArray();
@@ -96,7 +95,8 @@ public class JsonUtil {
                 .setName(taskObject.optString("name"))
                 .setIcon(taskObject.optString("icon"))
                 .setCreateTime(taskObject.optLong("createTime"))
-                .setEditTime(taskObject.optLong("editTime"));
+                .setEditTime(taskObject.optLong("editTime"))
+                .setWindowSize(taskObject.optInt("wWindow"), taskObject.optInt("hWindow"));
         List<Operation> operations = new ArrayList<>();
         task.setOperations(operations);
         
@@ -143,12 +143,8 @@ public class JsonUtil {
             WindowPositionManager.init();
             ActionManager.ignoreMove = true;
             ActionManager.highSpeed = true;
-            ActionManager.setWidthGameWindow(WindowPositionManager.wGameWindow);
-            ActionManager.setHeightGameWindow(WindowPositionManager.hGameWindow);
             return tasks;
         }
-        ActionManager.setWidthGameWindow(jsonObject.optInt("wWindow"));
-        ActionManager.setHeightGameWindow(jsonObject.optInt("hWindow"));
         ActionManager.ignoreMove = jsonObject.optBoolean("ignoreMove");
         ActionManager.highSpeed = jsonObject.optBoolean("highSpeed");
         JSONArray tasksArray = jsonObject.optJSONArray("tasks");
